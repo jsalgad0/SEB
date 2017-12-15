@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="buildwar" default="deploy" basedir=".">
+    <description> Compile, Package and Deploy AppajiMaamaa</description>
+    
+	<!-- set global properties for this build -->
+    
+	<property name="src" location="./src" />
+    <property name="classes" location="../build/classes" />
+    <property name="deployDest" location="/usr/local/share/apache-tomcat-8.0.33/webapps/" />
+	<property name="warname" location="../sab.war"/>
+	<property name="tomcat.home" value="/usr/local/share/apache-tomcat-8.0.33" />
+
+    <path id="project-classpath">
+        <!-- Libraries inside project lib folder like, Spring, Logging, Hibernate -->
+        <fileset dir="./WebRoot/WEB-INF/lib" includes="*.jar" />
+        <!-- Libraries inside server lib folder like, Servlet, JSP -->
+        <fileset dir="/usr/local/share/apache-tomcat-8.0.33/lib" includes="*.jar" />
+    </path>
+	
+	
+	<target name="tomcat-restart">
+	        <antcall target="tomcat-stop" />
+	        <antcall target="tomcat-start" />
+	</target>
+
+    <target name="tomcat-start">
+    	<!--
+        <java classname="org.apache.catalina.startup.Bootstrap" fork="true">
+            <classpath path="${tomcat.home}/bin/bootstrap.jar:${tomcat.home}/bin/tomcat-juli.jar" />
+            <jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+            
+        -->
+            <!--If you are getting any OutOfMemoryError, remove the comments 
+            and enable jvm argument of the following line-->
+            <!--jvmarg value="-XX:MaxPermSize=256m"/-->
+        <!-- </java> -->
+    	
+    	<exec executable="bash">
+    		<arg value="-c" />
+    		<arg value="BUILD_ID=dontKillMe; unset JENKINS_COOKIE; unset JENKINS_SERVER_COOKIE; nohup ${tomcat.home}/bin/startup.sh -Xms128M -Xmx1024M &amp;" />
+    	</exec>
+    </target>
+
+    <target name="tomcat-stop">
+    	<!--
+        <java classname="org.apache.catalina.startup.Bootstrap" fork="true">
+            <classpath path="${tomcat.home}/bin/bootstrap.jar:${tomcat.home}/bin/tomcat-juli.jar" />
+            <jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+            <arg line="stop"/>
+        </java>
+        -->
+    		
+		<exec executable="bash">
+			<arg value="-c" />
+		   	<arg value="bash ${tomcat.home}/bin/shutdown.sh" />
+		</exec>
+    </target>
+
+    <target name="clean">
+        <delete failonerror="false" dir="../build/classes">
+        </delete>
+        <echo> Cleaned old class files !</echo>
+        <delete failonerror="false">
+            <fileset dir="../build">
+                <include name="*.war" />
+            </fileset>
+        </delete>
+        <echo> Cleaned old war file in build folder !</echo>
+    </target>
+
+    <target name="cleanDeploy">
+    	<echo> Removed Previous Deployment inside Server!</echo>
+    	<delete failonerror="false" dir="/usr/local/share/apache-tomcat-8.0.33/webapps/sab" /> 
+    	<echo> Removed war files inside Server!</echo>
+    	<delete failonerror="false" file="/usr/local/share/apache-tomcat-8.0.33/webapps/sab.war"/> 
+    </target>
+
+    <target name="compile" depends="clean" description="compile the source ">
+        <mkdir dir="../build"/>
+        <mkdir dir="../build/classes" />
+        <javac includeantruntime="false" srcdir="${src}" destdir="${classes}" encoding="iso-8859-1" classpathref="project-classpath" />
+        <echo> Java file compiled and copied to classes folder !</echo>
+    </target>
+    
+    <target name="buildwar" description="Building War File" depends="compile">
+        <war destfile="${warname}" webxml="./WebRoot/WEB-INF/web.xml">
+            <fileset dir="./WebRoot">
+                <include name="**/*.jsp" />
+                <include name="**/*.xml" />
+                <include name="**/*.jar" />
+                <include name="**/*.png" />
+                <include name="**/*.jpg" />
+                <include name="**/*.css" />
+                <include name="**/*.gif" />
+                <include name="**/*.js" />
+                <include name="**/*.pdf" />
+                <include name="**/*.otf" />
+                <include name="**/*.psd" />
+                <include name="**/*.properties" />
+                <include name="**/*.txt" />
+            </fileset>
+            <lib dir="./WebRoot/WEB-INF/lib"></lib>
+            <classes dir="../build/classes" />
+        </war>
+    </target>
+    
+     <target name="deploy" depends="buildwar">
+        <copy file="${warname}" todir="${deployDest}" overwrite="true">
+        </copy>
+    </target>
+</project>

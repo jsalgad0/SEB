@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tam_fijo1 {
+	width:200px;
+}
+
+.tam_fijo2 {
+	width:120px;
+}
+
+.tam_fijo3 {
+	width:110px;
+}
+
+.tam_fijo4 {
+	width:75px;
+}
+
+.tam_fijo5 {
+	width:185px;
+}
+
+.tam_fijo6 {
+	width:245px;
+}
+
+.tam_fijo7 {
+	width:175px;
+}
+
+.tam_fijo8 {
+	width:35px;
+}
+
+.tam_fijo9 {
+	width:50px;
+}
+
+.tam_fijo10 {
+	width:85px;
+}
+
+.alto_campo {
+	height:30px;
+}
+
+.alto_error {
+	height:17px;
+}
+
+.alto_1 {
+	height:200px;
+}
+
+.ancho1 {
+	width:155px;
+}
+
+.ancho2 {
+	width:205px;
+}
+
+.ancho3 {
+	width:240px;
+}
+
+.ancho4 {
+	width:310px;
+}
+
+.margen_fijo1 {
+	margin-top:155px;
+}

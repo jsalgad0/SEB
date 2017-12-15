@@ -1,0 +1,545 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "quicksand-regular";
+    src:url(../font/Quicksand-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "quicksand-bold";
+    src:url(../font/Quicksand-Bold.otf) format("truetype");
+}
+
+p {
+	font-family:quicksand-regular;
+	text-align:left;
+}
+
+.menu_admin_atn {
+	width:100%;
+	height:177px;
+	background-color:#777d82;
+	float:right;
+	margin-top:4.5vw;
+	position:absolute;
+	
+}
+
+.menu_admin_atn2 {
+	width:100%;
+	height:133px;
+	background-color:#777d82;
+	float:right;
+	margin-top:4.5vw;
+	position:absolute;
+	
+}
+
+.texto_admin {
+	width:160px;
+	height:20px;
+	font-size:12px;
+	margin-left:15px;
+	display:inline-block;
+	line-height:12px;
+}
+
+/*Menu - botones izquierda */
+
+.menu_item {
+	width:100%;
+	height:43px;
+	background-color:#898f94;
+	float:right;
+	margin-top:1px;
+	background-repeat:no-repeat;
+	background-position:right;
+	cursor:pointer;
+	color:#FFF;
+}
+
+.menu_item_off {
+	width:100%;
+	height:43px;
+	background-color:#49a5b1;
+	float:right;
+	margin-top:1px;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#FFF;
+}
+
+.off16 {
+	background-image:url(../img/btn/nuevo_lector.png);
+}
+
+
+.item16 {
+	background-image:url(../img/btn/nuevo_lector.png);
+}
+
+.item16:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/nuevo_lector_over.png);
+	color:#32b6c7;
+}
+
+.item16:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/nuevo_lector.png);
+	color:#FFF;
+}
+
+
+.off17 {
+	background-image:url(../img/btn/mod_lector.png);
+}
+
+
+.item17 {
+	background-image:url(../img/btn/mod_lector.png);
+}
+
+.item17:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/mod_lector_over.png);
+	color:#32b6c7;
+}
+
+.item17:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/mod_lector.png);
+	color:#FFF;
+}
+
+
+.off18 {
+	background-image:url(../img/btn/baja_lector.png);
+}
+
+
+.item18 {
+	background-image:url(../img/btn/baja_lector.png);
+}
+
+.item18:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/baja_lector_over.png);
+	color:#32b6c7;
+}
+
+.item18:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/baja_lector.png);
+	color:#FFF;
+}
+
+
+.off19 {
+	background-image:url(../img/btn/nuevo_asegurador.png);
+}
+
+
+.item19 {
+	background-image:url(../img/btn/nuevo_asegurador.png);
+}
+
+.item19:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/nuevo_asegurador_over.png);
+	color:#32b6c7;
+}
+
+.item19:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/nuevo_asegurador.png);
+	color:#FFF;
+}
+
+.off20 {
+	background-image:url(../img/btn/mod_asegurador.png);
+}
+
+
+.item20 {
+	background-image:url(../img/btn/mod_asegurador.png);
+}
+
+.item20:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/mod_asegurador_over.png);
+	color:#32b6c7;
+}
+
+.item20:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/mod_asegurador.png);
+	color:#FFF;
+}
+
+.off21 {
+	background-image:url(../img/btn/eliminar_asegurador.png);
+}
+
+
+.item21 {
+	background-image:url(../img/btn/eliminar_asegurador.png);
+}
+
+.item21:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/eliminar_asegurador_over.png);
+	color:#32b6c7;
+}
+
+.item21:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/eliminar_asegurador.png);
+	color:#FFF;
+}
+
+.off22 {
+	background-image:url(../img/btn/nuevo_prestador.png);
+}
+
+
+.item22 {
+	background-image:url(../img/btn/nuevo_prestador.png);
+}
+
+.item22:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/nuevo_prestador_over.png);
+	color:#32b6c7;
+}
+
+.item22:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/nuevo_prestador.png);
+	color:#FFF;
+}
+
+.off23 {
+	background-image:url(../img/btn/mod_prestador.png);
+}
+
+
+.item23 {
+	background-image:url(../img/btn/mod_prestador.png);
+}
+
+.item23:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/mod_prestador_over.png);
+	color:#32b6c7;
+}
+
+.item23:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/mod_prestador.png);
+	color:#FFF;
+}
+
+.off24 {
+	background-image:url(../img/btn/eliminar_prestador.png);
+}
+
+
+.item24 {
+	background-image:url(../img/btn/eliminar_prestador.png);
+}
+
+.item24:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/eliminar_prestador_over.png);
+	color:#32b6c7;
+}
+
+.item24:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/eliminar_prestador.png);
+	color:#FFF;
+}
+
+.off25 {
+	background-image:url(../img/btn/nuevo_lugaratn.png);
+}
+
+
+.item25 {
+	background-image:url(../img/btn/nuevo_lugaratn.png);
+}
+
+.item25:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/nuevo_lugaratn_over.png);
+	color:#32b6c7;
+}
+
+.item25:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/nuevo_lugaratn.png);
+	color:#FFF;
+}
+
+.off26 {
+	background-image:url(../img/btn/mod_lugaratn.png);
+}
+
+
+.item26 {
+	background-image:url(../img/btn/mod_lugaratn.png);
+}
+
+.item26:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/mod_lugaratn_over.png);
+	color:#32b6c7;
+}
+
+.item26:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/mod_lugaratn.png);
+	color:#FFF;
+}
+
+.off27 {
+	background-image:url(../img/btn/eliminar_lugaratn.png);
+}
+
+
+.item27 {
+	background-image:url(../img/btn/eliminar_lugaratn.png);
+}
+
+.item27:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/eliminar_lugaratn_over.png);
+	color:#32b6c7;
+}
+
+.item27:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/eliminar_lugaratn.png);
+	color:#FFF;
+}
+
+.off28 {
+	background-image:url(../img/btn/nuevo_convenio.png);
+}
+
+
+.item28 {
+	background-image:url(../img/btn/nuevo_convenio.png);
+}
+
+.item28:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/nuevo_convenio_over.png);
+	color:#32b6c7;
+}
+
+.item28:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/nuevo_convenio.png);
+	color:#FFF;
+}
+
+.off29 {
+	background-image:url(../img/btn/mant_convenio.png);
+}
+
+
+.item29 {
+	background-image:url(../img/btn/mant_convenio.png);
+}
+
+.item29:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/mant_convenio_over.png);
+	color:#32b6c7;
+}
+
+.item29:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/mant_convenio.png);
+	color:#FFF;
+}
+
+.off30 {
+	background-image:url(../img/btn/cargar_catsab.png);
+}
+
+
+.item30 {
+	background-image:url(../img/btn/cargar_catsab.png);
+}
+
+.item30:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/cargar_catsab_over.png);
+	color:#32b6c7;
+}
+
+.item30:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/cargar_catsab.png);
+	color:#FFF;
+}
+
+.off31 {
+	background-image:url(../img/btn/actualizar_prestacion.png);
+}
+
+
+.item31 {
+	background-image:url(../img/btn/actualizar_prestacion.png);
+}
+
+.item31:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/actualizar_prestacion_over.png);
+	color:#32b6c7;
+}
+
+.item31:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/actualizar_prestacion.png);
+	color:#FFF;
+}
+
+.item0 {
+	background-image:url(../img/btn/regresar.png);
+}
+
+.item0:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/regresar_over.png);
+	color:#32b6c7;
+}
+
+.item0:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/regresar.png);
+	color:#FFF;
+}
+
+/*Termina Menu - botones izquierda */
+
+
+/******************************************************* Responsive Design *******************************************************************/
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1280px) {
+	
+.menu_medico_atn {
+	height:205px;
+}
+
+.texto_medico {
+	width:140px;
+	height:20px;
+	font-size:10px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:40px;
+	background-size:41px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:40px;
+	background-size:41px;
+}
+}
+
+@media screen and (min-width: 850px) and (max-width: 1086px) {
+
+.menu_medico_atn {
+	height:205px;
+}
+
+.texto_medico {
+	width:120px;
+	height:20px;
+	font-size:9px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:40px;
+	background-size:41px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:40px;
+	background-size:41px;
+}
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+	
+.menu_medico_atn {
+	height:195px;
+}
+
+.texto_medico {
+	width:70px;
+	height:20px;
+	font-size:7px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:38px;
+	background-size:39px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:38px;
+	background-size:39px;
+}
+}
+
+@media screen and (max-width: 480px) {
+	
+.menu_medico_atn {
+	height:195px;
+}
+
+.texto_medico {
+	width:50px;
+	height:20px;
+	font-size:6px;
+	margin-left:12px;
+}
+
+.menu_item {
+	width:100%;
+	height:38px;
+	background-size:39px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:38px;
+	background-size:39px;
+}
+}

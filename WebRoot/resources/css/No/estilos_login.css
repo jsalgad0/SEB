@@ -1,0 +1,460 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+    background: url(../img/bg.jpg) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+	text-decoration:none;
+}
+
+.flotante {
+	margin:0 auto;
+	width:100%;
+	margin-top:10%;
+	float:left;
+}
+
+.flotante2 {
+	margin:0 auto;
+	width:100%;
+	margin-top:1%;
+	float:left;
+}
+
+#logo_central {
+	background-image:url(../img/logo_SAB_login.png);
+	background-repeat:no-repeat;
+	width:359px;
+	height:174px;
+	margin:0 auto;
+}
+
+.contenedor_2 {
+	width:360px;
+	height:35px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+.contenedor_3 {
+	width:350px;
+	height:10px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+.campo_text {
+	width:300px;
+	height:35px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+.select {
+	background:url(../img/icono_flecha_aselect.png) no-repeat 300px 1px #0EBACF !important;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ appearance: none;
+}
+
+/*select*/
+
+#cssmenu {
+	height:35px;
+	width:337px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	position: relative;
+}
+#cssmenu a {
+	line-height: 1.3;
+}
+
+
+/*  -------- fin select ------    */
+
+.aviso {
+	width:300px;
+	height:10px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#E9EEF3;
+	background-color:transparent;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+
+.caja_arrow {
+	width:35px;
+	height:37px;
+	background: #2498a7;
+	border:none;
+	float:left;
+}
+
+#flecha {
+	width:11px;
+	height:19px;
+	margin-left:12px;
+	margin-top:9px;
+	background-image:url(../img/icono_flecha.png);
+	background-repeat:no-repeat;
+}
+
+#flecha_abajo {
+	width:22px;
+	height:13px;
+	margin-left:6px;
+	margin-top:13px;
+	background-image:url(../img/icono_flecha_abajo.png);
+	background-repeat:no-repeat;
+}
+
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 850px) and (max-width: 1280px) {
+
+#logo_central {
+	background-image:url(../img/logo_SAB_login.png);
+	background-repeat:no-repeat;
+	width:359px;
+	height:174px;
+	margin:0 auto;
+}
+
+.contenedor_2 {
+	width:360px;
+	height:35px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+.contenedor_3 {
+	width:350px;
+	height:10px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+.campo_text {
+	width:300px;
+	height:35px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+.aviso {
+	width:300px;
+	height:10px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#E9EEF3;
+	background-color:transparent;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+.caja_arrow {
+	width:35px;
+	height:37px;
+	background: #2498a7;
+	border:none;
+	float:left;
+}
+
+#flecha {
+	width:11px;
+	height:19px;
+	margin-left:12px;
+	margin-top:9px;
+	background-image:url(../img/icono_flecha.png);
+	background-repeat:no-repeat;
+}
+
+#flecha_abajo {
+	width:22px;
+	height:13px;
+	margin-left:6px;
+	margin-top:13px;
+	background-image:url(../img/icono_flecha_abajo.png);
+	background-repeat:no-repeat;
+}
+
+/*select*/
+
+#cssmenu {
+	height:35px;
+	width:337px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	position: relative;
+}
+#cssmenu a {
+	line-height: 1.3;
+}
+
+
+/*  -------- fin select ------    */
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+
+#logo_central {
+	background-image:url(../img/logo_SAB_login_480.png);
+	background-repeat:no-repeat;
+	width:191px;
+	height:93px;
+	margin:0 auto;
+}
+
+.contenedor_2 {
+	width:190px;
+	height:18px;
+	margin:0 auto;
+	padding-left:0.3em;
+}
+
+.contenedor_3 {
+	width:190px;
+	height:8px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+/*select*/
+
+#cssmenu {
+	height:35px;
+	width:337px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	position: relative;
+}
+#cssmenu a {
+	line-height: 1.3;
+}
+
+
+/*  -------- fin select ------    */
+
+.campo_text {
+	width:164px;
+	height:18px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:0.5em;
+}
+
+.aviso {
+	width:164px;
+	height:9px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#E9EEF3;
+	background-color:transparent;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+.caja_arrow {
+	width:18px;
+	height:19px;
+	background: #2498a7;
+	border:none;
+	float:left;
+}
+
+#flecha {
+	width:6px;
+	height:11px;
+	margin-left:7px;
+	margin-top:4px;
+	background-image:url(../img/icono_flecha_480.png);
+	background-repeat:no-repeat;
+}
+
+#flecha_abajo {
+	width:11px;
+	height:6px;
+	margin-left:3.5px;
+	margin-top:7px;
+	background-image:url(../img/icono_flecha_abajo480.png);
+	background-repeat:no-repeat;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+	
+#logo_central {
+	background-image:url(../img/logo_SAB_login_480.png);
+	background-repeat:no-repeat;
+	width:191px;
+	height:93px;
+	margin:0 auto;
+}
+
+.contenedor_2 {
+	width:190px;
+	height:18px;
+	margin:0 auto;
+	padding-left:0.3em;
+}
+
+.contenedor_3 {
+	width:190px;
+	height:8px;
+	margin:0 auto;
+	padding-left:0.7em;
+}
+
+.campo_text {
+	width:164px;
+	height:18px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:0.5em;
+}
+
+.aviso {
+	width:164px;
+	height:9px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#E9EEF3;
+	background-color:transparent;
+	margin:0 auto;
+	float:left;
+	border:none;
+	padding-left:1em;
+}
+
+.caja_arrow {
+	width:18px;
+	height:19px;
+	background: #2498a7;
+	border:none;
+	float:left;
+}
+
+#flecha {
+	width:6px;
+	height:11px;
+	margin-left:7px;
+	margin-top:4px;
+	background-image:url(../img/icono_flecha_480.png);
+	background-repeat:no-repeat;
+}	
+
+#flecha_abajo {
+	width:11px;
+	height:6px;
+	margin-left:3.5px;
+	margin-top:7px;
+	background-image:url(../img/icono_flecha_abajo480.png);
+	background-repeat:no-repeat;
+}	
+}
+/*
+.flecha1 {
+  margin:0 auto;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left:13px solid #ffffff;
+}
+
+
+
+.arrow:after {
+	border-color: rgba(36, 152, 167, 0);
+	border-left-color: #2498a7;
+	border-width: 20px;
+	margin-top: -20px;
+}
+.arrow:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 16px;
+	margin-top: -16px;
+}
+*/

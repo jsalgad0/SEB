@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "quicksand-regular";
+    src:url(../font/Quicksand-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "quicksand-bold";
+    src:url(../font/Quicksand-Bold.otf) format("truetype");
+}
+
+p {
+	font-family:quicksand-regular;
+	text-align:left;
+}
+
+.menu_enfermeria {
+	width:100%;
+	height:220px;
+	background-color:#777d82;
+	float:right;
+	margin-top:4.5vw;
+	position:absolute;
+	
+}
+
+.texto_enfermeria {
+	width:160px;
+	height:20px;
+	font-size:12px;
+	margin-left:15px;
+	display:inline-block;
+	line-height:12px;
+}
+
+/*Menu - botones izquierda */
+
+.menu_item {
+	width:100%;
+	height:43px;
+	background-color:#898f94;
+	float:right;
+	margin-top:1px;
+	background-repeat:no-repeat;
+	background-position:right;
+	cursor:pointer;
+	color:#FFF;
+}
+
+.menu_item_off {
+	width:100%;
+	height:43px;
+	background-color:#49a5b1;
+	float:right;
+	margin-top:1px;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#FFF;
+}
+
+.off10 {
+	background-image:url(../img/btn/signos_vitales.png);
+}
+
+
+.item10 {
+	background-image:url(../img/btn/signos_vitales.png);
+}
+
+.item10:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/signos_vitales_over.png);
+	color:#32b6c7;
+}
+
+.item10:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/signos_vitales.png);
+	color:#FFF;
+}
+
+.item0 {
+	background-image:url(../img/btn/regresar.png);
+}
+
+.item0:hover {
+	background-color:#373a41;
+	background-image:url(../img/btn/regresar_over.png);
+	color:#32b6c7;
+}
+
+.item0:active {
+	background-color:#49a5b1;
+	background-image:url(../img/btn/regresar.png);
+	color:#FFF;
+}
+
+/*Termina Menu - botones izquierda */
+
+
+/******************************************************* Responsive Design *******************************************************************/
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1280px) {
+	
+.menu_recepcion {
+	height:205px;
+}
+
+.texto_recepcion {
+	width:140px;
+	height:20px;
+	font-size:10px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:40px;
+	background-size:41px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:40px;
+	background-size:41px;
+}
+}
+
+@media screen and (min-width: 850px) and (max-width: 1086px) {
+
+.menu_recepcion {
+	height:205px;
+}
+
+.texto_recepcion {
+	width:120px;
+	height:20px;
+	font-size:9px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:40px;
+	background-size:41px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:40px;
+	background-size:41px;
+}
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+	
+.menu_recepcion {
+	height:195px;
+}
+
+.texto_recepcion {
+	width:70px;
+	height:20px;
+	font-size:7px;
+	margin-left:13px;
+}
+
+.menu_item {
+	width:100%;
+	height:38px;
+	background-size:39px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:38px;
+	background-size:39px;
+}
+}
+
+@media screen and (max-width: 480px) {
+	
+.menu_recepcion {
+	height:195px;
+}
+
+.texto_recepcion {
+	width:50px;
+	height:20px;
+	font-size:6px;
+	margin-left:12px;
+}
+
+.menu_item {
+	width:100%;
+	height:38px;
+	background-size:39px;
+
+}
+
+.menu_item_off {
+	width:100%;
+	height:38px;
+	background-size:39px;
+}
+}

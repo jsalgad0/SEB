@@ -1,0 +1,644 @@
+@charset "utf-8";
+/* CSS Document */
+
+.no_color {
+	background-color:transparent;
+}
+
+.error {
+	height:10px;
+	display:inline-block;
+	font-family:quicksand;
+	font-size:11px;
+	background-color:transparent;
+	text-align:left;
+	color:#E30003;
+	border:none;
+	padding-left:0.5em;
+	margin-right:2px;
+	margin-top:1px;
+}
+
+.error2 {
+	height:10px;
+	display:inline-block;
+	font-family:quicksand-bold;
+	font-size:11px;
+	background-color:transparent;
+	text-align:left;
+	color:#ff9900;
+	border:none;
+	padding-left:0.5em;
+	margin-right:10px;
+	margin-top:3px;
+}
+
+.image_btn {
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-right:5%;
+	margin-top:10px;
+	border: 0;
+	background-repeat:no-repeat;
+	background-color:transparent;
+}
+
+.btn{
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-right:5%;
+	margin-top:10px;
+	cursor:pointer;
+	border: 0;
+	background-repeat:no-repeat;
+}
+
+.btn2 {
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-right:5%;
+	cursor:pointer;
+	border: 0;
+	background-repeat:no-repeat;
+}
+
+.btn_grande {
+	width:167px;
+	height:30px;
+	margin-right:50px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.btn_solo {
+	width:35px;
+	height:32px;
+	display:inline-block;
+	cursor:pointer;
+	background-size:32px;
+	border:none;
+	background-repeat:no-repeat;
+	background-color:transparent;
+}
+
+.bote_input {
+	border:0px;
+	background-color:transparent;
+	margin-top:2.5px;
+}
+
+.bote {
+	background-image:url(../img/bote.png);
+	background-repeat:no-repeat;
+	border-color:white;
+}
+
+.bote_chico {
+	width:28px;
+	height:24px;
+	display:inline-block;
+	background-image:url(../img/bote_chico.png);
+	background-repeat:no-repeat;
+	border-color:white;
+}
+
+.buscar_icono {
+	background-image:url(../img/lupa.png);
+}
+
+.agregar_icono {
+	background-image:url(../img/btn_agregar.png);
+}
+
+.btn_desbloquear {
+	background-image:url(../img/btn_desbloquear.jpg);
+}
+
+.btn_nolista {
+	background-image:url(../img/btn_nolista.png);
+}
+
+.btn_guardar {
+	background-image:url(../img/guardar_chico.jpg);
+}
+
+.btn_cerrar {
+	background-image:url(../img/cerrar.jpg);
+}
+
+.btn_certificar {
+	background-image:url(../img/btn_certificar.png);
+}
+
+.btn_si {
+	background-image:url(../img/si_btn.jpg);
+}
+
+.btn_no {
+	background-image:url(../img/no_btn.jpg);
+}
+
+.btn_autorizar {
+	background-image:url(../img/btn_autorizar.png);
+}
+
+.btn_rechazar {
+	background-image:url(../img/btn_rechazar.png);
+}
+
+.btn_continuar {
+	background-image:url(../img/btn_continuar.jpg);
+}
+
+.btn_tomar_sig_vitales {
+	background-image:url(../img/tomar_signos_vitales.png);
+}
+
+.btn_valorizar {
+	background-image:url(../img/btn_valorizar.png);
+}
+
+.btn_atender {
+	background-image:url(../img/btn_atender.png);
+}
+
+.btn_pendiente {
+	background-image:url(../img/pend.png);
+	background-color:transparent;
+}
+
+.btn_palomasi {
+	background-image:url(../img/palomita_si1.png);
+	background-color:transparent;
+}
+
+.btn_cuadro_prest {
+	background-image:url(../img/btn_cuadro_prest.png);
+	background-color:transparent;
+}
+
+.btn_cuadro_med {
+	background-image:url(../img/btn_cuadro_med.png);
+	background-color:transparent;
+}
+
+.btn_x {
+	background-image:url(../img/btn_x.png);
+	background-color:transparent;
+}
+
+.btn_atendido {
+	background-image:url(../img/atendido.png);
+	background-color:transparent;
+}
+
+.btn_calendario {
+	background-image:url(../img/btn_calendario.png);
+}
+
+.btn_nueva_orden {
+	background-image:url(../img/btn_nueva_orden.png);
+}
+
+.btn_otrosdiag {
+	background-image:url(../img/btn_otrosdiag.png);
+}
+
+.btn_consultorio {
+	background-image:url(../img/btn_prest_consultorio.png);
+}
+
+.btn_licant {
+	background-image:url(../img/btn_licencias_ant.png);
+}
+
+.btn_subir {
+	background-image:url(../img/btn_subir.png);
+}
+
+.btn_cargar {
+	background-image:url(../img/btn_cargar.png);
+}
+
+.btn_reemplazo {
+	background-image:url(../img/btn_reemplazar.png);
+}
+
+
+.btn_receta_ant {
+	background-image:url(../img/btn_receta_ant.png);
+}
+
+.btn_receta_copy {
+	background-image:url(../img/btn_receta_copy.png);
+}
+
+.btn_firmar {
+	background-image:url(../img/btn_firmar.png);
+}
+
+.btn_cerrar_resumen {
+	background-image:url(../img/btn_cerrar_resumen.png);
+}
+
+.btn_nuevo_lector {
+	background-image:url(../img/btn_nuevo_lector.png);
+}
+
+.btn_eliminar {
+	background-image:url(../img/btn_eliminar.png);
+}
+
+.btn_registrar_convenio {
+	background-image:url(../img/btn_registrar_convenio.png);
+}
+
+.btn_baja_lector {
+	background-image:url(../img/btn_dar_baja.png);
+}
+
+.btn_imprimir_todo {
+	background-image:url(../img/btn_imprimir_todo.png);
+}
+
+.btn_imprimir {
+	background-image:url(../img/btn_imprimir.png);
+}
+
+.btn_imprimir {
+	background-image:url(../img/imprimir.png);
+}
+
+.btn_imprimir:hover {
+	background-image:url(../img/imprimir_over.png);
+}
+
+.btn_cerrar_atn {
+	background-image:url(../img/btn_cerrar_atn.png);
+}
+
+.btn_log_proceso {
+	background-image:url(../img/btn_log_proceso.png);
+}
+
+
+.btn_buscar {
+	width:101px;
+	height:2.2vw;
+	display:inline-block;
+	cursor:pointer;
+	background-image:url(../img/btn/btn_buscar.jpg);
+	border:none;
+}
+
+.estado {
+	width:16px;
+	height:16px;
+	top:5px;
+	margin:0 auto;
+	display:inline-block;
+}
+
+.edo1 {
+	background-image:url(../img/estado1a.png);
+}
+
+.edo2 {
+	background-image:url(../img/estado2a.png);
+}
+
+.edo3 {
+	background-image:url(../img/estado3a.png);
+}
+
+/************* Menu de pestañas superior *************/
+
+
+.pestanias_contenedor {
+	padding-left:7%;
+	padding-top:0;
+	margin-top:0;
+	display:inline-block;
+}
+
+.pestanias_contenedor ul {
+	padding:0;
+	list-style:none;
+	margin: 0;
+}
+
+ul
+{
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+#pmenu > li {
+	display:inline-block;
+}
+
+#pmenu a {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+#pmenu > li > a {
+	display:block;
+	width:68px;
+	height:43px;
+	padding-top:5px;
+	background-repeat:no-repeat;
+	background-image:url(../img/pestania.png);
+	background-position:center top;
+	text-deoration:none;
+	border:none;
+}
+
+#pmenu a:hover {
+	background-image:url(../img/pestania_over2.png);
+}
+
+#pmenu .pactiva a {
+	background-image:url(../img/pestania_clic.png);
+}
+
+#pmenu .pactivaroja a {
+	background-image:url(../img/pestania_roja.png);
+}
+
+li ul {
+	position:absolute;
+	display:none;
+}
+
+.psubmenu a{
+	display:block;
+	width:102px;
+}
+
+li:hover ul {
+	display:block;
+}
+
+.caja_texto {
+	width:102px;
+	height:46px;
+	background-image:url(../img/caja_texto.png);
+	background-repeat:no-repeat;
+	margin-left:0;
+	display:block;
+	text-align:center;
+}
+
+.caja_texto_grande {
+	width:102px;
+	height:46px;
+	background-image:url(../img/caja_texto.png);
+	background-repeat:no-repeat;
+	margin-left:0;
+	display:block;
+	text-align:center;
+}
+
+.pad_text1 {
+	padding-top:22px;
+}
+
+.pad_text2 {
+	padding-top:18px;
+}
+
+.pad_text3 {
+	padding-top:15px;
+	line-height:10px;
+}
+
+.texto_pestania {
+	font-family:quicksand-bold;
+	font-size:10.5px;
+	color:#FFFFFF;
+}
+
+.icono_pestania {
+	margin-left:15px;
+	background-repeat:no-repeat;
+	display:block;
+	border:none;
+	text-decoration:none;
+}
+
+.icono_pestania:hover {
+	margin-top:3px;
+}
+
+/* Lista de Tipo de familia */
+
+.caja_li {
+	float:left;
+	border:none;
+	text-decoration:none;
+}
+
+.texto_li {
+	float:left;
+	border:none;
+	text-decoration:none;
+}
+
+/* Menu de certificados */
+
+.pestania_certificado {
+	width:223px;
+	height:25px;
+	margin-left:0;
+	display:inline-block;
+	text-align:center;
+	cursor:pointer;
+}
+
+.btn_certificado1 {
+	background-image:url(../img/btn_constancia_asist.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado1:hover {
+	background-image:url(../img/btn_constancia_asist_hover.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado1_clic {
+	background-image:url(../img/btn_constancia_asist_clic.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado2 {
+	background-image:url(../img/btn_cuidados_maternales.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado2:hover {
+	background-image:url(../img/btn_cuidados_maternales_hover.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado2_clic {
+	background-image:url(../img/btn_cuidados_maternales_clic.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado3 {
+	background-image:url(../img/btn_constancia_salud.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado3:hover {
+	background-image:url(../img/btn_constancia_salud_hover.png);
+	background-repeat:no-repeat;
+}
+
+.btn_certificado3_clic {
+	background-image:url(../img/btn_constancia_salud_clic.png);
+	background-repeat:no-repeat;
+}
+
+/* Los siguientes sin uso */
+.icono_domicilio {
+	background-image:url(../img/domicilio.png);
+}
+
+
+.icono_demog {
+	background-image:url(../img/demograficos.png);
+}
+
+.icono_otros {
+	background-image:url(../img/Otros.png);
+}
+
+.icono_antefamiliares {
+	background-image:url(../img/historia_clinica/ante_familiares.png);
+}
+
+.icono_nopat {
+	background-image:url(../img/historia_clinica/personales_nopat.png);
+}
+
+.icono_antepersonales {
+	background-image:url(../img/historia_clinica/ante_personales.png);
+}
+
+.icono_gineco {
+	background-image:url(../img/historia_clinica/gineco.png);
+}
+
+.icono_exfisica {
+	background-image:url(../img/historia_clinica/exploracion_fisica.png);
+}
+
+.icono_tipofam {
+	background-image:url(../img/historia_clinica/tipo_familia.png);
+}
+
+.icono_familiograma {
+	background-image:url(../img/historia_clinica/familiograma.png);
+}
+
+.icono_expediente {
+	background-image:url(../img/historia_clinica/expediente_digital.png);
+}
+
+.icono_notamedica {
+	background-image:url(../img/atn_medica/nota_medica.png);
+}
+
+.icono_receta {
+	background-image:url(../img/atn_medica/receta.png);
+}
+
+.icono_lic_medica {
+	background-image:url(../img/atn_medica/licencia_medica.png);
+}
+
+.icono_elaboratorio {
+	background-image:url(../img/atn_medica/laboratorio.png);
+}
+
+.icono_egabinete {
+	background-image:url(../img/atn_medica/gabinete.png);
+}
+
+.icono_otrose {
+	background-image:url(../img/atn_medica/otros_estudios.png);
+}
+
+.icono_referencia {
+	background-image:url(../img/atn_medica/solicitud_referencia.png);
+}
+
+.icono_certificados {
+	background-image:url(../img/atn_medica/certificados.png);
+}
+
+
+
+
+/******************************************************* Responsive Design *******************************************************************/
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1280px) {
+
+
+.btn{
+	width:90px;
+	height:26px;
+	background-size:90px;
+}
+
+.btn_solo {
+	width:29px;
+	height:26px;
+	background-size:30px;
+}
+
+}
+
+@media screen and (min-width: 850px) and (max-width: 1086px) {
+	
+.btn{
+	width:70px;
+	height:20px;
+	background-size:70px;
+}
+
+.btn_solo {
+	width:25px;
+	height:21px;
+	background-size:30px;
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+	
+.btn{
+	width:51px;
+	height:15px;
+	background-size:51px;
+}
+}
+
+@media screen and (max-width: 480px) {
+	
+.btn{
+	width:30px;
+	height:8px;
+	background-size:30px;
+}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="log-path">/sab/logs/</Property>
+		<Property name="log-path-historic">/sab/logs/historic</Property>
+	</Properties>
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+		</Console>
+		<RollingFile name="RollingFile" fileName="${log-path}/sab.log"
+			filePattern="${log-path-historic}/sab-%d{yyyy-MM-dd_HH-mm-ss}_%i.log">
+			<PatternLayout>
+				<pattern>%d %-5p [%t] %C{2} (%F:%L) - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>	
+		<RollingFile name="RollingFile_info" fileName="${log-path}/sab_info.log"
+			filePattern="${log-path-historic}/sab_info-%d{yyyy-MM-dd_HH-mm-ss}_%i.log">
+			<PatternLayout>
+				<pattern>%d %-5p [%t] %C{2} (%F:%L) - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>		
+	</Appenders>
+	<Loggers>	
+		<Logger name="root" level="WARN" additivity="false">
+			<appender-ref ref="RollingFile" level="WARN"/>
+			<appender-ref ref="RollingFile_info" level="WARN"/>
+		</Logger>	
+		<Root level="WARN">
+			<AppenderRef ref="RollingFile"/>
+			<AppenderRef ref="RollingFile_info" level="WARN"/>
+			<AppenderRef ref="STDOUT" level="WARN"/>
+		</Root>	
+	</Loggers>
+</Configuration>

@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+.error {
+	height:10px;
+	display:inline-block;
+	font-family:quicksand;
+	font-size:11px;
+	background-color:transparent;
+	text-align:left;
+	color:#E30003;
+	border:none;
+	padding-left:0.5em;
+	margin-right:10px;
+	margin-top:3px;
+}
+
+.btn{
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-right:5%;
+	margin-top:10px;
+	cursor:pointer;
+	border: 0;
+	background-repeat:no-repeat;
+}
+
+.btn_grande {
+	width:167px;
+	height:30px;
+	margin-right:50px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.btn_solo {
+	width:35px;
+	height:32px;
+	display:inline-block;
+	cursor:pointer;
+	background-size:32px;
+	border:none;
+	background-repeat:no-repeat;
+	background-color:transparent;
+}
+
+.bote_input {
+	border:0px;
+	background-color:transparent;
+	margin-top:2.5px;
+}
+
+.bote {
+	background-image:url(../img/bote.png);
+}
+
+.buscar_icono {
+	background-image:url(../img/lupa.png);
+}
+
+.agregar_icono {
+	background-image:url(../img/btn_agregar.png);
+}
+
+.btn_desbloquear {
+	background-image:url(../img/btn_desbloquear.jpg);
+}
+
+.btn_nolista {
+	background-image:url(../img/btn_nolista.png);
+}
+
+.btn_guardar {
+	background-image:url(../img/guardar_chico.jpg);
+}
+
+.btn_cerrar {
+	background-image:url(../img/cerrar.jpg);
+}
+
+.btn_certificar {
+	background-image:url(../img/btn_certificar.png);
+}
+
+.btn_si {
+	background-image:url(../img/si_btn.jpg);
+}
+
+.btn_no {
+	background-image:url(../img/no_btn.jpg);
+}
+
+.btn_autorizar {
+	background-image:url(../img/btn_autorizar.png);
+}
+
+.btn_rechazar {
+	background-image:url(../img/btn_rechazar.png);
+}
+
+.btn_buscar {
+	width:101px;
+	height:2.2vw;
+	display:inline-block;
+	cursor:pointer;
+	background-image:url(../img/btn/btn_buscar.jpg);
+	border:none;
+}
+
+/******************************************************* Responsive Design *******************************************************************/
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1280px) {
+
+
+.btn{
+	width:90px;
+	height:26px;
+	background-size:90px;
+}
+
+.btn_solo {
+	width:29px;
+	height:26px;
+	background-size:30px;
+}
+
+}
+
+@media screen and (min-width: 850px) and (max-width: 1086px) {
+	
+.btn{
+	width:70px;
+	height:20px;
+	background-size:70px;
+}
+
+.btn_solo {
+	width:25px;
+	height:21px;
+	background-size:30px;
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+	
+.btn{
+	width:51px;
+	height:15px;
+	background-size:51px;
+}
+}
+
+@media screen and (max-width: 480px) {
+	
+.btn{
+	width:30px;
+	height:8px;
+	background-size:30px;
+}
+}

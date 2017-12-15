@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family:"quicksand-regular";
+	src:url(../font/Quicksand-Regular.otf) format("truetype");
+}
+
+#contenedor {
+	width:650px;
+	height:500px;
+	margin:0 auto;
+	padding-top: 1%;
+}
+
+.campo_e {
+	width:200px;
+	height:30px;
+	display:inline-block;
+	font-family:quicksand-regular;
+	font-size:17px;
+	background-color:#dfe4e7;
+	text-align:left;
+	color:#434242;
+	border:none;
+	padding-left:0.5em;
+	margin:0 auto;
+}
+
+.texto {
+	width:100%;
+	color:#000000;
+	padding-right:0.2em;
+	padding-left:5px;
+	display:inline-block;
+	margin:0 auto;
+}
+
+.texto2 {
+	width:38%;
+	height:30px;
+	color:#000000;
+	padding-right:0.2em;
+	padding-left:5px;
+	display:inline-block;
+	margin:0 auto;
+}
+
+.campo_r {
+	width:410px;
+	height:30px;
+	display:inline-block;
+	font-family:quicksand-regular;
+	font-size:17px;
+	background-color:#dfe4e7;
+	text-align:left;
+	color:#434242;
+	border:none;
+	padding-left:0.5em;
+	margin:0 auto;
+	margin-top:12px;
+}
+
+.campo_rchico {
+	width:230px;
+	height:30px;
+	display:inline-block;
+	font-family:quicksand-regular;
+	font-size:17px;
+	background-color:#dfe4e7;
+	text-align:left;
+	color:#434242;
+	border:none;
+	padding-left:0.5em;
+	margin:0 auto;
+	margin-top:12px;
+}
+
+h1 {
+	color:#000000;
+	font-family:quicksand-regular;
+	text-align:center;
+	font-size:17px;
+}
+
+h2 {
+	color:#0EBACF;
+	font-family:quicksand-regular;
+	text-align:center;
+	font-size:17px;
+}
+
+p {
+	font-family:quicksand-regular;
+	font-size:17px;
+	text-align:justify;
+}
+
+
+.selectt {
+	border:none;
+	background:url(../img/popup_usuario/icono_flecha_aselect.png) no-repeat 300px 1px #0EBACF !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance:none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+#cssmenu {
+	height:35px;
+	width:327px;
+	margin-top:10px;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	color:#FFFFFF;
+	background-color:#0EBACF;
+	position: relative;
+}
+#cssmenu a {
+	line-height: 1.3;
+}
+
+.btn_acepto {
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-left:210px;
+	margin-top:20px;
+	background-image:url(../img/popup_usuario/acepto.jpg);
+	cursor:pointer;
+}
+
+.btn_noacepto {
+	width:101px;
+	height:30px;
+	display:inline-block;
+	margin-left:25px;
+	margin-top:20px;
+	background-image:url(../img/popup_usuario/noacepto.jpg);
+	cursor:pointer;
+}
+
+.btn {
+	width:100%;
+	display:inline-block;
+	margin:0 auto;
+}

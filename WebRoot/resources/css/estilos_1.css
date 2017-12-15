@@ -1,0 +1,742 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color:#e2f1f8;
+	margin:0px;
+}
+
+#main_wrapper {
+	width:100%;
+	margin:0 auto;
+
+	background-color:#FFFFFF;	
+	    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#DFEDF4), to(white));
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(top, white, #DFEDF4);
+    /* Firefox 3.6+ */
+    background: -moz-radial-gradient(top, white, #DFEDF4);
+    /* Opera 11.10+ */
+    background: -o-radial-background(top, white, #DFEDF4);
+    /* IE 10 */
+	background: -ms-radial-gradient(left top , circle , white, #DFEDF4 1200px);
+	/*IE 9*/
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#DFEDF4',GradientType=0 );
+    /* estándar */ 
+    background: radial-background(top, white, #DFEDF4);
+
+}
+
+
+#header {
+	width:100%;
+	height:40px;
+	display:inline-block;
+	position:fixed;
+	z-index:3;
+	margin:0 0 0 0;
+}
+
+#logo {
+	width:17%;
+	height:40px;
+	background-color:#369ca9;
+	background-image:url(../img/logo_SAB_header.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	display:inline-block;
+}
+
+
+#info_head1 {
+	width:26%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+
+#info_head2 {
+	width:3%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+
+.info_head3 {
+	width:24%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+.info_head4 {
+	width:11%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+
+/* modificar input file */
+
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.custom-input-file .input-file {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 10000px;
+    border: 10000px solid transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+    cursor: pointer;
+}
+
+/* fin de modificar input file */
+
+.espacio {
+	width:40%;
+	font-size:30%;
+	font-family:quicksand;
+	display:table-cell;
+	color:#46b6c4;
+}
+
+.texto_head {
+	width:24%;
+	display:table-cell;
+	text-align:right;
+	font-family:quicksand;
+	font-size:75%;
+	color:#FFFFFF;
+	position:relative;
+	padding-left:1.5em;
+	padding-right:1em;
+	padding-top:0.5em;
+}
+
+.usuario {
+	width:28px;
+	height:28px;
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:75%;
+	color:#FFFFFF;
+	position:relative;
+	background-image:url(../img/icono_usuario2.jpg);
+	cursor:pointer;
+}
+
+
+@font-face {
+    font-family: "quicksand";
+    src:url(../font/Quicksand-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "quicksand-bold";
+    src:url(../font/Quicksand-Bold.otf) format("truetype");
+}
+
+
+#fecha {
+	width:8%;
+	height:40px;
+	display:inline-block;
+}
+
+#fecha_i {
+	display:table;
+	font-family:quicksand;
+	padding-top:1em;
+	font-weight:bolder;
+	font-size:90%;
+	color:#495358;
+	margin:0 auto;
+	text-align:center;
+}
+
+
+#nav {
+	width:17%;
+	height:700px;
+	display:inline-block;
+	position:fixed;
+	z-index:2;
+	background-color:#ADC5D0;
+	background: -moz-linear-gradient(top, #EEF6FC, #D7EAF3, #ADC5D0 570px);/* F 3.6+ */
+    background: -ms-linear-gradient(top, #EEF6FC, #D7EAF3, #ADC5D0 570px);/* IE 10+ */
+    background: -webkit-linear-gradient(top, #EEF6FC, #D7EAF3, #ADC5D0 570px);/* FF 3.6+ */
+    background: -o-linear-gradient(top, #EEF6FC, #D7EAF3, #ADC5D0 570px);/* Safari 5.1+, Chrome 10+ */ 
+    background: linear-gradient(top, #EEF6FC, #D7EAF3, #ADC5D0 570px);/* ESTILO ESTANDAR */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEF6FC', endColorstr='#ADC5D0',GradientType=0 );
+}
+
+#menu_interno {
+	width:81%;
+	height:570px;
+	display:inline-block;
+	padding-top:2.5vw;
+	padding-left:10vw;
+	z-index:1;
+	position:relative;
+	background-color:transparent;
+}
+
+.titulo_menu {
+	width:850px;
+	height:25px;
+	font-family:quicksand;
+	font-size:25px;
+	text-align:right;
+	color:#495358;
+	font-weight:bold;
+	float:left;
+	margin-left:10px;
+}
+
+.pleca {
+	width:860px;
+	height:5px;
+	color:#495358;
+	background-image:url(../img/pleca.png);
+	background-repeat:no-repeat;
+	float:left;
+	margin-top:8px;
+}
+
+.btn_flotante {
+	width:160px;
+	height:159px;
+	float:left;
+	color:#FFF;
+	margin-right:15px;
+	margin-top:15px;
+	background-color:transparent;
+	position:relative;
+}
+
+h2 {
+	width:150px;
+	height:8px;
+	position:absolute;
+	top:100px;
+	margin-left:3px;
+	font-family:quicksand;
+	font-size:12px;
+	text-align:center;
+	font-weight:normal;
+	line-height:1.2em; 
+}
+
+
+#reloj {
+	display:block;
+	margin:0 auto;
+	padding-top:2.2em;
+	width:50%;
+	vertical-align:center;
+	font-family:quicksand;
+	font-size:1.7em;
+	color:#485156;
+	position:relative;
+}
+
+#clock {
+	float:left;
+}
+
+.coolclock-digital {
+	float:right;
+	padding-left:0em;
+	display:inline-block;
+}
+
+/* Caja select de desplazamiento */
+
+.wrap-boxx{
+	width:50vw;
+	height:100%;
+	display: inline-block;
+	margin-right:1vw;
+	position:relative;
+}
+
+.archivos_caja {
+	display:inline-block;
+	width: 20vw;
+	color:#49a5b1;
+	height: 10.5vw;
+	border: 1px solid rgba(6,180,183,1.00);
+	padding-top:1vw;
+	padding-left:1vw;
+	margin-top:1vw;
+	font-family:quicksand-regular;
+	font-size:1em;
+	vertical-align:top;
+	background-color:#dfe4e7;
+}
+ 
+.campo_cajax {
+	height:2.2vw;
+	display:inline-block;
+	font-family:quicksand-regular;
+	font-size:0.8em;
+	background-color:#dfe4e7;
+	text-align:left;
+	color:#434242;
+	border:none;
+	padding-left:0.5em;
+	margin-right:10px;
+	margin-top:12px;
+} 
+
+
+/******************************************************* Responsive Design *******************************************************************/
+
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1280px) {
+
+#fecha_i {
+	display:table;
+	font-family:quicksand;
+	padding-top:1em;
+	font-weight:bolder;
+	font-size:80%;
+	color:#495358;
+	margin:0 auto;
+	text-align:center;
+}
+
+.espacio {
+	width:1em;
+	font-size:70%;
+	font-family:quicksand;
+	display:table-cell;
+	color:#46b6c4;
+}
+
+.texto_head {
+	width:24%;
+	display:table-cell;
+	text-align:right;
+	font-family:quicksand;
+	font-size:65%;
+	color:#FFFFFF;
+	position:relative;
+	padding-left:1.5em;
+	padding-right:1em;
+	padding-top:0.5em;
+}
+
+#usuario {
+	width:28px;
+	height:28px;
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:75%;
+	color:#FFFFFF;
+	position:relative;
+	background-image:url(../img/icono_usuario2.jpg);
+	cursor:pointer;
+}
+
+#menu_interno {
+	width:81%;
+	height:570px;
+	display:inline-block;
+	padding-top:2.5vw;
+	padding-left:10vw;
+	z-index:1;
+	position:relative;
+	background-color:transparent;
+}
+
+.titulo_menu {
+	width:680px;
+	height:25px;
+	font-family:quicksand;
+	font-size:25px;
+	text-align:right;
+	color:#495358;
+	font-weight:bold;
+	float:left;
+	margin-left:1px;
+}
+
+.pleca {
+	width:680px;
+	height:5px;
+	color:#495358;
+	background-image:url(../img/pleca.png);
+	background-repeat:no-repeat;
+	background-size:680px;
+	float:left;
+	margin-top:8px;
+	margin-left:1px;
+}
+
+#reloj {
+	display:block;
+	margin:0 auto;
+	padding-top:3em;
+	width:50%;
+	vertical-align:center;
+	font-family:quicksand;
+	font-size:1.3em;
+	color:#485156;
+}
+
+#clock {
+	float:left;
+	width:100%;
+	margin:0 auto;
+}
+
+.coolclock-digital {
+	width:55%;
+	margin:0 auto;
+	float:left;
+	display:inline-block;
+	padding-left:0.4em;
+	padding-top:0.2em;
+}
+}
+
+@media screen and (min-width: 850px) and (max-width: 1086px) {
+	
+#fecha_i {
+	display:table;
+	font-family:quicksand;
+	padding-top:1em;
+	font-weight:bolder;
+	font-size:75%;
+	color:#495358;
+	margin:0 auto;
+	text-align:center;
+}
+
+.texto_head {
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:65%;
+	color:#FFFFFF;
+	position:relative;
+	padding-left:1.5em;
+	padding-right:0.3em;
+	padding-top:0.5em;
+}
+
+#menu_interno {
+	width:75%;
+	height:570px;
+	display:inline-block;
+	padding-top:2.5vw;
+	padding-left:10vw;
+	z-index:1;
+	position:relative;
+	background-color:transparent;
+}
+
+.titulo_menu {
+	width:500px;
+	height:25px;
+	font-family:quicksand;
+	font-size:25px;
+	text-align:right;
+	color:#495358;
+	font-weight:bold;
+	float:left;
+	margin-left:1px;
+}
+
+.pleca {
+	width:500px;
+	height:5px;
+	color:#495358;
+	background-image:url(../img/pleca.png);
+	background-repeat:no-repeat;
+	background-size:500px;
+	float:left;
+	margin-top:8px;
+	margin-left:1px;
+}
+
+#reloj {
+	display:block;
+	margin:0 auto;
+	padding-top:3em;
+	width:50%;
+	vertical-align:center;
+	font-family:quicksand;
+	font-size:1em;
+	color:#485156;
+}
+
+#clock {
+	float:left;
+	width:100%;
+	margin:0 auto;
+}
+
+.coolclock-digital {
+	width:40%;
+	margin:0 auto;
+	float:left;
+	display:inline-block;
+	padding-left:0.4em;
+	padding-top:0.2em;
+}
+
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+
+
+/* Còdigo para mover bloque de textos debajo del bloque del logo - pendiente -
+
+#logo {
+	width:100%;
+	height:40px;
+	background-color:#369ca9;
+	background-image:url(img/logo_SAB_header.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	display:inline-block;
+}
+
+#info_head1 {
+	width:46%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+
+#info_head2 {
+	width:46%;
+	height:32px;
+	background-color:#46b6c4;
+	display:inline-block;
+	padding-top:8px; 
+}
+
+*/
+
+#fecha_i {
+	display:table;
+	font-family:quicksand;
+	font-weight:bolder;
+	font-size:60%;
+	color:#495358;
+	margin:0 auto;
+	text-align:center;
+	padding-top:1.4em;
+}
+
+.espacio {
+	width:0.5em;
+	font-size:60%;
+	font-family:quicksand;
+	display:table-cell;
+	color:#46b6c4;
+}
+
+
+.texto_head {
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:65%;
+	color:#FFFFFF;
+	position:relative;
+	padding-left:1.5em;
+	padding-right:0.3em;
+	padding-top:0.5em;
+}
+
+#usuario {
+	width:22px;
+	height:22px;
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:65%;
+	color:#FFFFFF;
+	position:relative;
+	background-image:url(../img/icono_usuario2.jpg);
+	background-size:22px;
+	cursor:pointer;
+}
+
+#menu_interno {
+	width:75%;
+	height:570px;
+	display:inline-block;
+	padding-top:2.5vw;
+	padding-left:10vw;
+	z-index:1;
+	position:relative;
+	background-color:transparent;
+}
+
+.titulo_menu {
+	width:340px;
+	height:25px;
+	font-family:quicksand;
+	font-size:18px;
+	text-align:right;
+	color:#495358;
+	font-weight:bold;
+	float:left;
+	margin-left:1px;
+}
+
+.pleca {
+	width:340px;
+	height:5px;
+	color:#495358;
+	background-image:url(../img/pleca.png);
+	background-repeat:no-repeat;
+	background-size:340px;
+	float:left;
+	margin-top:8px;
+	margin-left:1px;
+}
+
+#reloj {
+	display:block;
+	margin:0 auto;
+	padding-top:3.5em;
+	width:50%;
+	vertical-align:center;
+	font-family:quicksand;
+	font-size:1em;
+	color:#485156;
+}
+
+#clock {
+	float:left;
+	width:100%;
+	margin:0 auto;
+}
+
+.coolclock-digital {
+	width:35%;
+	margin:0 auto;
+	float:left;
+	display:inline-block;
+	padding-left:0em;
+	padding-top:0.3em;
+}
+}
+
+@media screen and (max-width: 480px) {
+	
+#fecha_i {
+	display:table;
+	font-family:quicksand;
+	font-weight:bolder;
+	font-size:60%;
+	color:#495358;
+	margin:0 auto;
+	text-align:center;
+	padding-top:1.5em;
+}
+
+.espacio {
+	width:0.5em;
+	font-size:60%;
+	font-family:quicksand;
+	display:table-cell;
+	color:#46b6c4;
+}
+
+.texto_head {
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:50%;
+	color:#FFFFFF;
+	position:relative;
+	padding-left:0.5em;
+	padding-right:0.3em;
+	padding-top:0.5em;
+}
+
+#usuario {
+	width:19px;
+	height:19px;
+	display:table-cell;
+	text-align:center;
+	font-family:quicksand;
+	font-size:50%;
+	color:#FFFFFF;
+	position:relative;
+	background-image:url(../img/icono_usuario2.jpg);
+	background-size:19px;
+	cursor:pointer;
+}
+
+#reloj {
+	display:block;
+	margin:0 auto;
+	padding-top:3.5em;
+	width:50%;
+	vertical-align:center;
+	font-family:quicksand;
+	font-size:1em;
+	color:#485156;
+}
+
+#clock {
+	float:left;
+	width:100%;
+	margin:0 auto;
+}
+
+.coolclock-digital {
+	width:25%;
+	margin:0 auto;
+	float:left;
+	display:inline-block;
+	padding-left:0em;
+}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	

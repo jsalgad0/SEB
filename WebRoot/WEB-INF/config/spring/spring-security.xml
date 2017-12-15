@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.2.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="com.mx.sab.security,com.mx.sab.service" />
+
+	<security:http auto-config="true">
+		<security:intercept-url pattern="/menu**" access="ROLE_REGISTRO_LECTOR,ROLE_USUARIOS,ROLE_ASEGURADOR,ROLE_PRESTADOR,
+														  ROLE_LUGAR_ATENCION,ROLE_CONVENIOS,ROLE_CUADRO_PRESTACIONES,
+														  ROLE_MEDICAMENTOS,ROLE_PRESTACIONES,ROLE_PACIENTES_PRESENTES,
+														  ROLE_LISTA_PACIENTES,ROLE_AGENDA, ROLE_SUPERVISOR,
+														  ROLE_MANTENIMIENTO, ROLE_FARMACIA" />
+		<security:form-login login-page="/login" default-target-url="/menu" authentication-failure-url="/login?error" />
+	  	<security:logout logout-success-url="/login?logout" />
+	</security:http>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="customAuthenticationProvider" />
+	</security:authentication-manager>
+
+	<import resource="spring-jdbc.xml" />
+
+</beans>

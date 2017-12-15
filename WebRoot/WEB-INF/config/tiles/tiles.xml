@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition name=".loginTemplate" template="/WEB-INF/jsp/templates/login.jsp">
+        <put-attribute name="title" value="Login SAB" type="string" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainTemplate" template="/WEB-INF/jsp/templates/main.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainPopUpsDeclaracion" template="/WEB-INF/jsp/templates/mainPopUpsDeclaracion.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>    
+
+    <definition name=".mainPopUpsRegistrado" template="/WEB-INF/jsp/templates/mainPopUpsRegistrado.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition> 
+
+    <definition name=".mainPopUps" template="/WEB-INF/jsp/templates/mainPopUps.jsp">
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+
+
+    <definition name=".mainDatosUsuario" template="/WEB-INF/jsp/templates/mainDatosUsuario.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition> 
+    
+    <definition name=".mainTemplateAdministrador" template="/WEB-INF/jsp/templates/mainAdministrador.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>               
+
+    <definition name=".mainTemplateMantenimientoUsuarios" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMantenimientoUsuarios.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>  
+    
+    <definition name=".mainTemplateClaveBloqueada" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuClaveBloqueada.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>       
+    
+    <definition name=".mainTemplateDeclaracionNoAceptada" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuDeclaracionNoAceptada.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>     
+
+    <definition name=".mainTemplateModificarUsuario" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuModificarUsuario.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>     
+
+    <definition name=".mainTemplateNuevoUsuario" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuNuevoUsuario.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition> 
+    
+    <definition name=".mainTemplatePendienteClave" template="/WEB-INF/jsp/templates/mainMantenimientoUsuarios.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuPendienteClave.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition> 
+    
+    <definition name=".mainSupervisor" template="/WEB-INF/jsp/templates/mainSupervisor.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>  
+    
+    <definition name=".mainMedico" template="/WEB-INF/jsp/templates/mainMedico.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika" template="/WEB-INF/jsp/templates/mainErika.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuErika.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika2" template="/WEB-INF/jsp/templates/mainErika2.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menuErika_lector" value="/WEB-INF/jsp/templates/menuErika_lector.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika3" template="/WEB-INF/jsp/templates/mainErika3.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menuErika_asegurador" value="/WEB-INF/jsp/templates/menuErika_asegurador.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika4" template="/WEB-INF/jsp/templates/mainErika4.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menuErika_prestador" value="/WEB-INF/jsp/templates/menuErika_prestador.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika5" template="/WEB-INF/jsp/templates/mainErika5.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menuErika_lugar" value="/WEB-INF/jsp/templates/menuErika_lugar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name=".mainErika6" template="/WEB-INF/jsp/templates/mainErika6.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menuErika_convenio" value="/WEB-INF/jsp/templates/menuErika_convenio.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>  
+    
+    <definition name=".mainRecepcion" template="/WEB-INF/jsp/templates/mainRecepcionista.jsp">
+        <put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuRecepcionPacientes.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+    </definition>
+    
+    <definition name="listaSignos" template="/WEB-INF/jsp/templates/mainEnfermeria.jsp">
+    	<put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuEnfermeria2.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/signosVitales/listaPacientes.jsp" />
+    </definition>                
+                     
+    <definition name="welcome" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/body.jsp" />
+    </definition>
+    
+    <definition name="hello" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/hello.jsp" />
+    </definition>    
+    
+    <definition name="menu" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/menu/menu.jsp" />
+    </definition>  
+    
+	<definition name="menuAdminSab" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/menu/menuAdminSab.jsp" />
+    </definition>
+
+	<definition name="menuRecepcionista" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/menu/menuRecepcionista.jsp" />
+    </definition>    
+    
+    <definition name="login" extends=".loginTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/login/login.jsp" />
+    </definition>   
+    
+   	<definition name="loginRol" extends=".loginTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/login/loginRol.jsp" />
+    </definition> 
+    
+	<definition name="loginSecurity" extends=".loginTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/login/loginSecurity.jsp" />
+    </definition>  
+    
+<!-- 	<definition name="prestadorNuevo" extends=".mainTemplate"> -->
+<!--         <put-attribute name="body" value="/WEB-INF/jsp/administrador/prestador/nuevo.jsp" /> -->
+<!--     </definition>      -->
+    
+<!--      <definition name="prestadores" extends=".mainTemplate"> -->
+<!--         <put-attribute name="body" value="/WEB-INF/jsp/administrador/prestador/prestadores.jsp" /> -->
+<!--     </definition>    -->
+    
+	<definition name="lugarAtencionNuevo" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/nuevo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuLugarAtencion.jsp" />
+    </definition>
+    
+    <definition name="lugarAtencionEditar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/editar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuLugarAtencion.jsp" />
+    </definition>  
+    
+	<definition name="lugarAtencionEliminar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/eliminar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuLugarAtencion.jsp" />
+    </definition> 
+    
+     <definition name="lugarAtencion" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuLugarAtencion.jsp" />
+    </definition>      
+    
+	<definition name="registroLectores" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuRegistroLectores.jsp" />
+    </definition>   
+    
+    <definition name="asegurador" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/asegurador.jsp" />
+    </definition>
+    
+<!-- 	<definition name="registroLectoresNuevo" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/registroLectores/nuevo.jsp" />
+    </definition> -->  
+    
+<!--      <definition name="registroLectores" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/registroLectores/registroLectores.jsp" />
+    </definition> --> 
+    
+    
+	<definition name="registroLectorNuevo" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/registroLectores/nuevo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuRegistroLectores.jsp" />
+    </definition>
+    
+	<definition name="registroLectorEditar" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/registroLectores/editar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuRegistroLectores.jsp" />
+    </definition> 
+    
+	<definition name="registroLectorEliminar" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/registroLectores/eliminar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuRegistroLectores.jsp" />
+    </definition>
+    
+	<definition name="prestadores" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuPrestadores.jsp" />
+    </definition> 
+    
+    <definition name="prestadorNuevo" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/prestador/nuevo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuPrestadores.jsp" />
+    </definition>     
+    
+    <definition name="prestadorEditar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/prestador/editar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuPrestadores.jsp" />
+    </definition>  
+    
+	<definition name="prestadorEliminar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/prestador/eliminar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuPrestadores.jsp" />
+    </definition>  
+    
+	<definition name="aseguradores" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuAseguradores.jsp" />
+    </definition> 
+    
+    <definition name="aseguradorNuevo" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/nuevo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuAseguradores.jsp" />
+    </definition>     
+    
+    <definition name="cargaCuadroPrestacionesAsegurador" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/cargaCuadroPrestacion.jsp" />
+    </definition> 
+    
+    <definition name="aseguradorEditar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/editar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuAseguradores.jsp" />
+    </definition>  
+    
+	<definition name="aseguradorEliminar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/eliminar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuAseguradores.jsp" />
+    </definition> 
+    
+    <definition name="bitacoraSAB" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/cargaCatalogoSab/bitacoraCargaSab.jsp" />
+    </definition>    
+    
+    <definition name="inicioCatalogoSab" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+         <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuSab_cpt4.jsp" />
+    </definition> 
+    
+       	<definition name="cargaCatalogoSab" extends=".mainTemplateAdministrador">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/cargaCatalogoSab/cargaCatalogoSab.jsp" />
+         <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuSab_cpt4.jsp" />
+    </definition> 
+    
+        
+	<definition name="convenioNuevo" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/convenios/nuevo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuConvenios.jsp" />
+    </definition>     
+    
+     <definition name="convenios" extends=".mainTemplate">
+     	<put-attribute name="body" value="/WEB-INF/jsp/administrador/lugarAtencion/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuConvenios.jsp" />
+    </definition> 
+    
+    <definition name="convenioEditar" extends=".mainTemplateAdministrador">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/convenios/editar.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuConvenios.jsp" />
+    </definition>      
+    
+<!--     <definition name="aseguradores" extends=".mainTemplate"> -->
+<!--         <put-attribute name="body" value="/WEB-INF/jsp/administrador/asegurador/aseguradores.jsp" /> -->
+<!--     </definition>   -->
+    
+    <definition name="usuario" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/usuario/usuario.jsp" />
+    </definition>  
+        
+
+    
+    
+    
+    <definition name="cuadroPrestacionesNuevo" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/cuadroPrestaciones/nuevo.jsp" />
+    </definition> 
+    
+    <definition name="cuadroPrestaciones" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/cuadroPrestaciones/cuadroPrestaciones.jsp" />
+    </definition>    
+    
+    <definition name="agenda" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/agenda/agenda.jsp" />
+    </definition>  
+    
+   	<definition name="personaConfianzaNuevo" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/agenda/personaConfianza/nuevo.jsp" />
+    </definition>
+    
+   	<definition name="errorPopUp" extends=".mainPopUps">
+        <put-attribute name="body" value="/error/pantalla_error_popup.jsp" />
+    </definition>       
+    
+   	<definition name="recepcion" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/agenda/recepcion.jsp" />
+    </definition>
+    
+   	<definition name="recepcionPresencial" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/agenda/recepcionPresencial.jsp" />
+    </definition>  
+    
+   	<definition name="recepcionCitasPresenciales" extends=".mainRecepcion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/citasPresenciales/recepcion.jsp" />
+    </definition> 
+    
+    <definition name="recepcionInicioAtencionesPendientes" extends=".mainRecepcion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/recepcion/atencionesPendientes/atencionesPendientesDeAutorizar.jsp" />
+    </definition>    
+    
+    <definition name="recepcionInicioBuscarAtencion" extends=".mainRecepcion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/recepcion/buscarAtencion/buscarAtencion.jsp" />
+    </definition>   
+
+     <definition name="recepcionListaAtenciones" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/recepcion/buscarAtencion/listaAtencionesMedicas.jsp" />
+    </definition>          
+    
+        <definition name="recuperarAtencionesPendientes" extends=".mainRecepcion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/recepcion/atencionesPendientes/recuperarAtencion.jsp" />
+    </definition>            
+   
+   	<definition name="usuarios" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/administrador/usuario/usuarios.jsp" />
+    </definition>
+    
+    <definition name="tomaSignos" template="/WEB-INF/jsp/templates/mainEnfermeria.jsp">
+    	<put-attribute name="title" value="SAB" type="string" />
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuEnfermeria2.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/signosVitales/tomaSignos.jsp" />
+    </definition> 
+    
+    <definition name="seleccionarMedico" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/seleccionarMedico/seleccionarMedico.jsp" />
+    </definition>  
+    
+    <definition name="ordenServicio" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/citasPresenciales/ordenServicio.jsp" />
+    </definition>    
+    
+    <definition name="listaPacientes" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/listaPacientes.jsp" />
+    </definition>   
+    
+    <definition name="atencionMedica" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/atencionMedica/atencionMedica.jsp" />
+    </definition> 
+    
+    <definition name="diagnosticos" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/atencionMedica/diagnosticos.jsp" />
+    </definition> 
+    
+    <definition name="informacionPaciente" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/informacionPaciente/informacionPaciente.jsp" />
+    </definition> 
+    
+    <definition name="historiaClinica" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/historiaClinica/historiaClinica.jsp" />
+    </definition> 
+    
+    <definition name="prestaciones" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/atencionMedica/prestaciones.jsp" />
+    </definition>     
+    
+    <definition name="recetaMedica" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/recetaMedica/recetaMedicas.jsp" />
+    </definition>  
+            
+    <definition name="seleccionMedicamentos" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/recetaMedica/seleccionMedicamentos.jsp" />
+    </definition>
+    
+    <definition name="licenciaMedica" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/licenciaMedica/licenciaMedica.jsp" />
+    </definition>    
+    
+    <definition name="licenciasMedicas" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/licenciaMedica/licenciasMedicas.jsp" />
+    </definition>      
+    
+    <definition name="solicitudReferencia" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/solicitudReferencia/solicitudReferencia.jsp" />
+    </definition>        
+                
+    <definition name="contrareferencia" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/contrareferencia/contrareferencia.jsp" />
+    </definition>    
+    
+    <definition name="certificados" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/certificados/certificados.jsp" />
+    </definition>
+
+    <definition name="constanciaDeAsistencia" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/certificados/constanciaDeAsistencia/constanciaDeAsistencia.jsp" />
+    </definition>     
+    
+    <definition name="constanciaDeSalud" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/certificados/constanciaDeSalud/constanciaDeSalud.jsp" />
+    </definition>  
+    
+    <definition name="constanciaCuidadosMaternales" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/certificados/constanciaCuidadosMaternales/constanciaCuidadosMaternales.jsp" />
+    </definition>   
+    
+    <definition name="finalizarAtencion" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/listaPacientes/finalizarAtencion/finalizarAtencion.jsp" />
+    </definition>  
+
+    <definition name="autorizacionEspecial" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/autorizacionEspecial/autorizacionEspecial.jsp" />
+    </definition>     
+    
+    <definition name="autorizacionEspecialHuella" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/autorizacionEspecial/autorizacionEspecialHuella.jsp" />
+    </definition>     
+    
+    <definition name="mantenimientoUsuarios" extends=".mainTemplateMantenimientoUsuarios">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/mantenimientoUsuarios.jsp" />
+    </definition>  
+    
+    <definition name="mantenimientoUsuarioNuevo" extends=".mainTemplateNuevoUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuarioNuevo/usuarioNuevo.jsp" />
+    </definition> 
+    
+    <definition name="mantenimientoModificarUsuarios" extends=".mainTemplateModificarUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/modificarUsuario/modificarUsuarios.jsp" />
+    </definition> 
+    
+    <definition name="mantenimientoModificarUsuario" extends=".mainTemplateModificarUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/modificarUsuario/modificarUsuario.jsp" />
+    </definition>   
+    
+    <definition name="mantenimientoUsuariosPendientesClave" extends=".mainTemplatePendienteClave">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuariosPendientesClave/usuariosPendientesClave.jsp" />
+    </definition> 
+   
+    <definition name="mantenimientoUsuariosDeclaracionPendiente" extends=".mainTemplateDeclaracionNoAceptada">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuariosDeclaracionPendiente/usuariosDeclaracionPendiente.jsp" />
+    </definition> 
+    
+    <definition name="mantenimientoUsuariosBloqueados" extends=".mainTemplateClaveBloqueada">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuariosBloqueados/usuariosBloqueados.jsp" />
+    </definition>     
+
+    <definition name="mantenimientoUsuarioBloqueado" extends=".mainTemplateClaveBloqueada">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuariosBloqueados/usuarioBloqueado.jsp" />
+    </definition>
+
+    <definition name="mantenimientoUsuariosMostrarDeclaracion" extends=".mainPopUpsDeclaracion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuariosDeclaracionPendiente/declaracion.jsp" />
+    </definition>  
+    
+    <definition name="mantenimientoUsuariosMostrarRegistrado" extends=".mainPopUpsRegistrado">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/mantenimientoUsuarios/usuarioNuevo/registrado.jsp" />
+    </definition>
+    
+    <definition name="datosUsuario" extends=".mainDatosUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/datosUsuario/datosUsuario.jsp" />
+    </definition>
+    
+    <definition name="datosUsuarioClave" extends=".mainDatosUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/datosUsuario/datosUsuarioClave.jsp" />
+    </definition>   
+    
+    <definition name="datosUsuarioPregunta" extends=".mainDatosUsuario">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/datosUsuario/datosUsuarioPregunta.jsp" />
+    </definition>                        
+    
+    <definition name="ingresarClave" extends=".loginTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/login/ingresarClave.jsp" />
+    </definition>  
+    
+    <definition name="olvidoClave" extends=".loginTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/login/olvidoClave.jsp" />
+    </definition> 
+    
+    <definition name="supervisorAtencionPendientes" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/atencionesPendientes/atencionesPendientes.jsp" />
+    </definition>   
+    
+    <definition name="supervisorUsuariosPendientes" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/usuariosPendientes/usuariosPendientes.jsp" />
+    </definition>
+    
+    <definition name="notasNoFirmadas" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/notasNoFirmadas/notasNoFirmadas.jsp" />
+    </definition>     
+
+    <definition name="pruebaErica" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica.jsp" />
+    </definition>
+    
+    <definition name="pruebaErica1" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica1.jsp" />
+    </definition>
+    
+    <definition name="pruebaErica2" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica2.jsp" />
+    </definition>  
+    
+    <definition name="pruebaErica3" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica3.jsp" />
+    </definition> 
+    
+    <definition name="pruebaErica4" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica4.jsp" />
+    </definition> 
+    
+    <definition name="pruebaErica5" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica5.jsp" />
+    </definition>
+ 
+   <definition name="pruebaErica6" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica6.jsp" />
+    </definition>     
+    
+  <definition name="pruebaErica7" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica7.jsp" />
+    </definition>
+    
+   <definition name="pruebaErica8" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica8.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica9" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica9.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica10" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica10.jsp" />
+   </definition>         
+   
+   <definition name="pruebaErica11" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica11.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica12" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica12.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica13" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica13.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica14" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica14.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica15" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica15.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica16" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica16.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica17" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica17.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica18" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica18.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica19" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica19.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica20" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica20.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica21" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica21.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica22" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica22.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica23" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica23.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica24" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica24.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica25" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica25.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica26" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica26.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica27" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica27.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica28" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica28.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica29" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica29.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica30" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica30.jsp" />
+   </definition>                                   
+    
+    <definition name="pruebatablas" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/tablas.jsp" />
+    </definition> 
+    
+    <definition name="pruebaLista_pacientes" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/lista_pacientes.jsp" />
+    </definition>  
+    
+    <definition name="pruebaatn_paciente" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/atn_paciente.jsp" />
+    </definition>
+    
+   <definition name="pruebaerica_admin1" extends=".mainErika2">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica_admin1.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica40" extends=".mainErika2">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica40.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica41" extends=".mainErika2">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica41.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica42" extends=".mainErika2">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica42.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica43" extends=".mainErika3">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica43.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica44" extends=".mainErika3">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica44.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica45" extends=".mainErika3">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica45.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica46" extends=".mainErika4">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica46.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica47" extends=".mainErika4">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica47.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica48" extends=".mainErika4">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica48.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica49" extends=".mainErika5">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica49.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica50" extends=".mainErika5">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica50.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica51" extends=".mainErika5">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica51.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica52" extends=".mainErika6">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica52.jsp" />
+   </definition> 
+   
+   <definition name="pruebaErica53" extends=".mainErika6">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica53.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica54" extends=".mainErika6">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica54.jsp" />
+   </definition>  
+   
+   <definition name="pruebaErica55" extends=".mainErika">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica55.jsp" />
+   </definition>
+   
+   <definition name="pruebaErica56" extends=".mainErika6">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica56.jsp" />
+        <put-attribute name="menuErika_convenio" value="/WEB-INF/jsp/templates/menuErika_sab_cpt4.jsp"></put-attribute>
+   </definition>
+   
+   <definition name="pruebaErica57" extends=".mainErika6">
+        <put-attribute name="body" value="/WEB-INF/jsp/erica/erica57.jsp" />
+   </definition>                
+
+    <definition name="supervisorAtencionesPendientesMotivo" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/atencionesPendientes/atencionesPendientesMotivo.jsp" />
+    </definition>    
+        
+    <definition name="supervisorNotasNoFirmadasMotivo" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/notasNoFirmadas/notasNoFirmadasMotivo.jsp" />
+    </definition>
+
+    <definition name="supervisorAutorizacionIdentidad" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/atencionesPendientes/atencionesPendientesIdentidad.jsp" />
+    </definition>    
+    
+     <definition name="supervisorUsuarioIdentidad" extends=".mainSupervisor">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/supervisor/usuariosPendientes/usuariosPendientesIdentidad.jsp" />
+    </definition>         
+    
+    <definition name="pacientesRecibidos" extends=".mainRecepcion">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/recepcion/pacientesRecibidos/pacientesRecibidos.jsp" />
+    </definition>  
+    
+	<definition name="medicoInicioAtencionPacientes" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionPacientes.jsp" />
+    </definition>
+    
+    <definition name="medicoAntecedentesFamiliares" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/antecedentesFamiliares.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+    
+    <definition name="medicoAntecedentesPersonales" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/antecedentesPersonales.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+    
+    <definition name="medicoGinecoObstentricos" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/ginecoObstentricos.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+    
+    <definition name="medicoExploracionFisica" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/exploracionFisica.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+
+    
+    <definition name="medicoCicloVital" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/cicloVital.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+
+	<definition name="medicoInicioInformacionPaciente" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencion/medicoInicioInformacionPaciente.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition> 
+    
+    <definition name="medicoInicioNotaMedica" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/notaMedica/notaMedica.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+    
+	<definition name="menuMedico" extends=".mainMedico">
+        <put-attribute name="body" value="/WEB-INF/jsp/templates/blank.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+    </definition>
+    
+	<definition name="historiaClinicaPersonalesNoPatologicos" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historiaClinica/personalesNoPatologicos.jsp" />
+    </definition>    
+    
+	<definition name="historialPorDiagnostico" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historialPorDiagnostico/historialPorDiagnostico.jsp" />
+    </definition> 
+    
+	<definition name="historialDiagnosticoDetallado" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historialPorDiagnostico/historialPorDiagnosticoDetallado.jsp" />
+    </definition> 
+        
+	<definition name="historialAtenciones" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/historialAtenciones/historialAtenciones.jsp" />
+
+    </definition> 
+             
+	<definition name="atencionOtrosDiagnosticos" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/otrosDiagnosticos.jsp" />
+    </definition>       
+    
+	<definition name="atencionSignosVitales" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/signosVitales.jsp" />
+    </definition>
+    
+    <definition name="atencionEstudiosMedicos" extends=".mainMedico">
+    	<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/estudiosMedicos.jsp" />
+    </definition>  
+   
+    <definition name="atencionReceta" extends=".mainMedico">
+    	<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/receta.jsp" />
+    </definition>  
+                
+    <definition name="atencionLicenciaMedica" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/licenciaMedica.jsp" />
+    </definition>
+    
+    <definition name="atencionConstanciaAsistencia" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/certificados/constanciaAsistencia.jsp" />
+    </definition>
+    
+    <definition name="atencionCuidadosMaternales" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/certificados/cuidadosMaternales.jsp" />
+    </definition>
+    
+    <definition name="atencionConstanciaSalud" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/certificados/constanciaSalud.jsp" />
+    </definition>
+    
+    <definition name="atencionSolicitudReferencia" extends=".mainMedico">
+		<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/solicitudReferencia.jsp" />
+    </definition>     
+    
+    <definition name="atencionTerminar" extends=".mainMedico">
+    	<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/terminar.jsp" />
+    </definition>
+    
+    <definition name="finTerminar" extends=".mainMedico">
+    	<put-attribute name="menu" value="/WEB-INF/jsp/templates/menuMedico.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/resumenTerminar.jsp" />
+    </definition> 
+    
+   	<definition name="mostrarClave" extends=".mainPopUps">
+        <put-attribute name="body" value="/WEB-INF/jsp/modulos/medico/atencionPacientes/atencionMedica/claveMedico.jsp" />
+    </definition>           
+       
+</tiles-definitions>
