@@ -117,7 +117,7 @@ function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,
 	erc = Autentia.IniciarSesion("611330-2",21);
 	erc = Autentia.Transaccion (autentiaPathTrx+"verifica",Params);
 	
-	$.getJSON("http://localhost:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
+	$.getJSON("http://seb:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
 		
 	});
 	
@@ -192,7 +192,7 @@ function IniciarUsuarioLogin(idUsuario, idAfiliado, idAgenda, dato, tipoDato, no
 	console.log("tipoDato: " + tipoDato);
 	console.log("nombre: " + nombre);
 	
-	$.getJSON("http://localhost:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
+	$.getJSON("http://seb:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
 		
 	});
 	

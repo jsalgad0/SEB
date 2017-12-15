@@ -49,7 +49,7 @@
 				<td>
 					<form:input path="prestaciones" cssStyle="width:600px"/>
 					
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/prestaciones?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/prestaciones?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
 				</td>				
 			</tr>
 			<tr>
@@ -61,7 +61,7 @@
 					<c:if test="${finalizarAtencionForm.atencionFinalizada == true}">
 						<input type="button" value="Receta Medica" onclick="imprimirRecetaMedica()" />
 					</c:if>
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/recetaMedica?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/recetaMedica?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
 				</td>				
 			</tr>	
 			<tr>
@@ -73,7 +73,7 @@
 					<c:if test="${finalizarAtencionForm.atencionFinalizada == true}">
 						<input type="button" value="Constancia Asistencia" onclick="constanciaAsistencia()" />
 					</c:if>					
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=1">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=1">Editar</a> -->
 				</td>				
 			</tr>
 			<tr>
@@ -85,7 +85,7 @@
 					<c:if test="${finalizarAtencionForm.atencionFinalizada == true}">
 						<input type="button" value="Constancia Salud" onclick="constanciaSalud()" />
 					</c:if>										
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=2">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=2">Editar</a> -->
 				</td>				
 			</tr>
 			<tr>
@@ -97,7 +97,7 @@
 					<c:if test="${finalizarAtencionForm.atencionFinalizada == true}">
 						<input type="button" value="Licencia Medica" onclick="imprimirLicenciaMedica()" />
 					</c:if>										
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=3">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/estudiosMedicos?idAgenda=${finalizarAtencionForm.idAgenda}&idEstudios=3">Editar</a> -->
 					
 				</td>				
 			</tr>		
@@ -110,7 +110,7 @@
 					<c:if test="${finalizarAtencionForm.atencionFinalizada == true}">
 						<input type="button" value="Constancia Cuidados Maternales" onclick="constanciaCuidadosMaternales()" />
 					</c:if>						
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/licenciaMedica?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/licenciaMedica?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
 				</td>				
 			</tr>
 			<tr>
@@ -126,7 +126,7 @@
 						<input type="button" value="Solicitud Referencia" onclick="imprimirSolicitudReferencia()" />
 						<input type="button" value="Solicitud Contrareferencia" onclick="imprimirSolicitudContrareferencia()" />												
 					</c:if>
-					<!-- <a href="http://localhost:8080/SAB/listaPacientes/solicitudReferencia?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
+					<!-- <a href="http://seb:8080/SAB/listaPacientes/solicitudReferencia?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
 				</td>				
 			</tr>	
 			<tr>
@@ -134,7 +134,7 @@
 					Contrareferencia:		
 				</td>
 				<td>
-					<form:input path="contrareferenciaS" cssStyle="width:600px"/><!-- <a href="http://localhost:8080/SAB/listaPacientes/contrareferencia?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
+					<form:input path="contrareferenciaS" cssStyle="width:600px"/><!-- <a href="http://seb:8080/SAB/listaPacientes/contrareferencia?idAgenda=${finalizarAtencionForm.idAgenda}">Editar</a> -->
 				</td>				
 			</tr>																							
 			<tr>

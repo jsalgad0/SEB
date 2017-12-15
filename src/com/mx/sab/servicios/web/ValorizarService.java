@@ -38,7 +38,7 @@ public class ValorizarService extends Service {
 			baseUrl = com.mx.sab.servicios.web.ValorizarService.class
 					.getResource(".");
 			url = new URL(baseUrl,
-					"http://localhost:8080/serviciosWeb/ValorizarPort?wsdl");
+					"http://seb:8080/serviciosWeb/ValorizarPort?wsdl");
 		} catch (MalformedURLException e) {
 			logger.warning("Failed to create URL for the wsdl Location: 'http://54.153.29.217/serviciosWeb/ValorizarPort?wsdl', retrying as a local file");
 			logger.warning(e.getMessage());
