@@ -7,7 +7,6 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
 <script type="application/javascript" type="text/javascript" src="${pageContext.request.contextPath}/resources/js/getinfo_autentia.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.min.js"></script>
 
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/fancyBox/fancyapps-fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -30,7 +29,7 @@
 <body>
 	<form:form name='loginForm' action="loginVerificacion" method='POST' commandName="loginForm" id="loginForm" >
 		<form:hidden path="error"/>
-		<form:hidden path="tx_Marca" value="10793"/>
+		<form:hidden path="tx_Marca"/>
 		<form:hidden path="tx_Serie"/>
 		<form:hidden path="tx_Modelo"/>
 		<form:hidden path="tx_Fabric"/>
@@ -42,7 +41,7 @@
 		<form:hidden path="ingresarClave"/>
 		<input type="radio" name="rd_32" value="UAREU" id="rd_32" style="display:none">
         <input type="radio" name="rd_32" value="UAREU-Gold" id="rd_64" checked="checked"  style="display:none">
-        <form:hidden path="idUsuario"/>
+        <!-- <form:hidden path="idUsuario"/> -->
         <form:hidden path="nombre"/>
         <form:hidden path="apellidoPaterno"/>
         <form:hidden path="apellidoMaterno"/>

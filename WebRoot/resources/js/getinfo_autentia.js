@@ -5,7 +5,7 @@ function isIE(){
 }
 
 var autentiaPathTrx = "../AUTEMEXICO/";
-
+var Autentia = new plgAutentiaJS();
 
 
 function SerieAutentia(){
@@ -41,11 +41,20 @@ function Graba(){
 	Params.CUbic	= "";
 	Params.Ins		= "";
 	Params.Sistema	= sistema;
-	erc = Autentia.Transaccion ("$SYS/_SensorCodeT64",Params);
-	// Ahora que tenemos la respuesta de autentia, en Params, nos enviamos por POST el numero de auditoria
-	MSensor = Params.CSensor;
-	MUbic	= Params.CUbic;
-	MIns	= Params.Ins;
+	var token = estampaTiempo();
+	var salida = ['erc', 'ercDesc', 'NroAudit'];
+	//erc = Autentia.Transaccion2 (autentiaPathTrx+"RegSensor64",Params, salida, true, token, function (response) {
+	erc = Autentia.Transaccion2 ("$SYS/_SensorCodeT64",Params, salida, true, token, function (response) {
+        if (!exitoAutentia(response)) {
+            //$('#modal').modal('hide');
+            show_error('Error', '<strong>' + glosaAutentia(response) + '</strong>');
+        }else{
+        	// Ahora que tenemos la respuesta de autentia, en Params, nos enviamos por POST el numero de auditoria
+        	MSensor = Params.CSensor;
+        	MUbic	= Params.CUbic;
+        	MIns	= Params.Ins;
+        }
+	});
 	return; //Params.CSensor;
 }	
 
@@ -77,10 +86,17 @@ function GetInfoSensorInterno(){
 	oSistema = "64 bits";
 	}
 	Graba();
+	
+	//EN DURO GERMAN
+	MSensor = "xxx";
+	MUbic = "1";
+	MIns = "10793";
+	//***************
+	
 	CodInterno = MSensor;
-	if( CodInterno == "." )
+	if( CodInterno == "." ){
 		;
-	else if( CodInterno == "" ){
+	}else if( CodInterno == "" ){
 		oMsg.innerHTML = "Debe conectar un lector para leer su c\u00F3digo interno.";
 		document.getElementById('lectorConectado').value = false;
 	}else{
@@ -96,6 +112,8 @@ function GetInfoSensorInterno(){
 }
 function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,paterno,materno,sexo,fecha,estado){
 	var _params = "undefined";
+	var token = estampaTiempo();
+	var salida = ['erc', 'ercDesc', 'NroAudit'];
 	var Params   = new TParams;
 	Params.Dato  			= dato;
 	Params.TipoDato			= tipoDato; 
@@ -115,7 +133,12 @@ function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,
 	Params.Cant				= 0;		
 	erc						= 200;
 	erc = Autentia.IniciarSesion("611330-2",21);
-	erc = Autentia.Transaccion (autentiaPathTrx+"verifica",Params);
+	erc = Autentia.Transaccion2 (autentiaPathTrx+"verifica",Params, salida, true, token, function (response) {
+        if (!exitoAutentia(response)) {
+            $('#modal').modal('hide');
+            show_error('Error', '<strong>' + glosaAutentia(response) + '</strong>');
+        }
+	});
 	
 	$.getJSON("http://seb:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
 		
@@ -172,19 +195,26 @@ function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,
 
 function IniciarUsuarioLogin(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,paterno,materno,sexo,fecha,estado){
 	var _params = "undefined";
+	var token = estampaTiempo();
+	var salida = ['erc', 'ercDesc', 'NroAudit'];
 	var Params   = new TParams;
 	Params.Dato  			= dato;
 	Params.TipoDato			= tipoDato; 
 	Params.Empresa	= "PFA120717716";
 	
 	Params.Erc				= 0;
-	Params.NroAudit			= "xxxx";
-	Params.ErcDesc			= "joel";
+	Params.NroAudit			= "";
+	Params.ErcDesc			= "";
 	Params.FormaString		= "";
 	Params.Cant				= 0;		
 	erc						= 0;
-	//erc = Autentia.IniciarSesion("611330-2",21);
-	//erc = Autentia.Transaccion (autentiaPathTrx+"verifica",Params);
+	erc = Autentia.IniciarSesion("611330-2",21);
+	erc = Autentia.Transaccion2 (autentiaPathTrx+"verifica",Params, salida, true, token, function (response) {
+        if (!exitoAutentia(response)) {
+            $('#modal').modal('hide');
+            show_error('Error', '<strong>' + glosaAutentia(response) + '</strong>');
+        }
+	});
 	console.log("idUsuario: " + idUsuario);
 	console.log("idAfiliado: " + idAfiliado);
 	console.log("idAgenda: " + idAgenda);
@@ -250,4 +280,10 @@ function TParams(){
 	this.TipoDato  = '';
 	this.Empresa  = '';
 	this.Lugar = '';
+}
+
+function estampaTiempo() {
+    var d = new Date();
+    var n = d.getTime();
+    return n;
 }
