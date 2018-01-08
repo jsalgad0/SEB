@@ -10,6 +10,8 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/plugin.autentia.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.alphanum.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.paginate.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/genericScript.js"></script>

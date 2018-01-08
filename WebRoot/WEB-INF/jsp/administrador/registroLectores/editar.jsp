@@ -155,7 +155,7 @@
 			return;
 		}
 		
-		erc = Autentia.Transaccion ("$SYS/_conslector",Params);  //enrola_10dedos_C
+		erc = Autentia.Transaccion2("$SYS/_conslector",Params);  //enrola_10dedos_C
 		if (Params.CSensor != ""){
 			$("#codigoLugarAtencionAux").val(Params.Ins);
 			$("#codigoLugarAtencion").val(Params.Ins);
@@ -194,7 +194,7 @@
         	$("#lugarAtencion").val("");
         	$("#idLugarAtencion").val("");
         	$("#btnGuardar").hide();
-            res = Autentia.Transaccion("$SYS/_CodSensorMX",Params2);
+            res = Autentia.Transaccion2("$SYS/_CodSensorMX",Params2);
             $("#noDeSerieInterno").val(Params2.CSensor);
 			$.fancybox.open({
 				content : "<div id=\"contenedor3_popup\"><div class=\"icon_popup usuario2\"></div><h1>Lector no ha sido dado de alta</h1><div class=\"btn_popup\"><div class=\"btn_cerrar_popup\" onclick=\"$.fancybox.close();\"></div></div></div>",
@@ -322,7 +322,7 @@
 			Params.Descripcion	= $("#propietarioLector").val();
 		
 
-	   	res = parent.Autentia.Transaccion("$SYS/_RegSensor64",Params);
+	   	res = parent.Autentia.Transaccion2("$SYS/_RegSensor64",Params);
 		if (Params.resul == "S" || res==0){
 			$.fancybox.open({
 				content : "<div id=\"contenedor3_popup\"><div class=\"icon_popup usuario1\"></div><h1>"+exito+"</h1><div class=\"btn_popup\"><div class=\"btn_cerrar_popup\" onclick=\"$.fancybox.close();\"></div></div></div>",

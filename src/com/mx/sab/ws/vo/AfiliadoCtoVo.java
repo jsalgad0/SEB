@@ -79,8 +79,4 @@ public class AfiliadoCtoVo implements Serializable{
 		this.codProducto = codProducto;
 	}
 	
-	
-	
-	
-	
 }

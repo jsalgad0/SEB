@@ -135,6 +135,7 @@
     }
 	
 	function consulta(){
+		console.info("Consulta lector");
 		var Params   = new TParams; 
 		erc				= 200;
 		Params.CodExt   = $("#noDeSerie").val();
@@ -156,7 +157,7 @@
 			return;
 		}
 		
-		erc = Autentia.Transaccion ("$SYS/_conslector",Params);  //enrola_10dedos_C
+		erc = Autentia.Transaccion2 ("$SYS/_conslector",Params);  //enrola_10dedos_C
 		if (Params.CSensor != ""){
 			$("#codigoLugarAtencionAux").val(Params.Ins);
 			$("#codigoLugarAtencion").val(Params.Ins);
@@ -222,7 +223,7 @@
         	$("#lugarAtencion").val("");
         	$("#idLugarAtencion").val("");
         	$("#btnGuardar").show();
-            res = Autentia.Transaccion("$SYS/_CodSensorMX",Params2);
+            res = Autentia.Transaccion2("$SYS/_CodSensorMX",Params2);
             $("#noDeSerieInterno").val(Params2.CSensor);
 			/* alert("El código " +Params2.CodExt+ " no existe en la base, debe ser registrado."); */
 		}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -164,7 +165,8 @@ public class MantenimientoModificarUsuarioServiceImpl implements IMantenimientoM
 		mantenimientoModificarUsuarioForm.setRegSs(usuarios.getRegSs());
 		
 		Collection<Usuariorol> usuariorols = usuarioDao.getUsuariosRolByLugar(usuarios.getUsuarioId(),lugaresdeatencion.getLugarDeAtencionId());
-		String[] rols = new String[roles.size()];
+		//String[] rols = new String[roles.size()];
+		String[] rols = new String[usuariorols.size()];
 		int i = 0;
 		for (Usuariorol usuariorol : usuariorols) {
 			rols[i] = "" + usuariorol.getRoles().getRolId();

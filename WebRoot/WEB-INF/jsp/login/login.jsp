@@ -2,11 +2,11 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-<OBJECT classid='CLSID:592B9D7E-51C9-401F-A03C-4DE61FF7008D' name="Autentia" id='Autentia'><embed></embed></OBJECT>
+
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
-<script type="application/javascript" type="text/javascript" src="${pageContext.request.contextPath}/resources/js/getinfo_autentia.js"></script>
+
 
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/fancyBox/fancyapps-fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>

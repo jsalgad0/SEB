@@ -4,9 +4,8 @@ function isIE(){
 
 }
 
-var autentiaPathTrx = "../AUTEMEXICO/";
+var autentiaPathTrx = "../IMRD/";
 var Autentia = new plgAutentiaJS();
-
 
 function SerieAutentia(){
 	var objNSuareu = document.getElementById('NSuareu');
@@ -19,8 +18,6 @@ function SerieAutentia(){
 		return ".";
 	}
 }
-
-
 
 function TParamsInfoLector(){
 	this.CSensor = '';
@@ -37,22 +34,42 @@ var sistema  = '';
 function Graba(){
 	var Params   = new TParamsInfoLector;
 	erc				= 200;
-	Params.CSensor	= "";
-	Params.CUbic	= "";
-	Params.Ins		= "";
-	Params.Sistema	= sistema;
+	Params.Tecnologia	= sistema;
+
+	//Params.Sistema	= sistema;
 	var token = estampaTiempo();
-	var salida = ['erc', 'ercDesc', 'NroAudit'];
-	//erc = Autentia.Transaccion2 (autentiaPathTrx+"RegSensor64",Params, salida, true, token, function (response) {
-	erc = Autentia.Transaccion2 ("$SYS/_SensorCodeT64",Params, salida, true, token, function (response) {
+	//var salida = ['erc', 'ercDesc', 'NroAudit'];
+	var salida = ['NroSerie', 'Ubicacion', 'Institucion'];
+	
+	erc = Autentia.Transaccion2 (autentiaPathTrx+"SensorCodeT64",Params, salida, true, token, function (response) {
+	//erc = Autentia.Transaccion2 ("$SYS/_SensorCodeT64",Params, salida, true, token, function (response) {
         if (!exitoAutentia(response)) {
             //$('#modal').modal('hide');
             show_error('Error', '<strong>' + glosaAutentia(response) + '</strong>');
         }else{
-        	// Ahora que tenemos la respuesta de autentia, en Params, nos enviamos por POST el numero de auditoria
-        	MSensor = Params.CSensor;
-        	MUbic	= Params.CUbic;
-        	MIns	= Params.Ins;
+        	// Ahora que tenemos la respuesta de autentia, en Params, nos enviamos por POST el numero de auditoria        
+        	MSensor = response.ParamsGet.NroSerie;
+        	MUbic	= response.ParamsGet.Ubicacion;
+        	MIns	= response.ParamsGet.Institucion;  
+        	
+        	CodInterno = MSensor;
+        	
+        	if( CodInterno == "." ){
+        		;
+        	}else if( CodInterno == "" ){
+        		oMsg.innerHTML = "Debe conectar un lector para leer su c\u00F3digo interno.";
+        		document.getElementById('lectorConectado').value = false;
+        	}else{
+        		document.getElementById('tx_Serie').value = MSensor; // CodInterno;
+        		try {
+        			document.getElementById('tx_Modelo').value = MIns; //Fnc.GetSannerInfo( CodInterno );
+        			document.getElementById('tx_Marca').value = MUbic; //Fnc.strRc();
+        			//document.getElementById('la_Ver').innerHTML = Fnc.Version();
+        			
+        		}catch ( err ) {
+        			//alert(err.description + ".<ul><li>- Para obtener informaci\u00F3n adicional verifique que la componente AutenLib09.dll est\u00E9 correctamente registrado.<li>- Verifique en la pesta\u00F1a de Seguridad que este sitio est\u00E9 entre los Sitios de Confianza.<li>- Debe activar la opción [Controles y Complementos ActiveX] / [Inicializar y activar la secuencia de comandos de los controles de ActiveX no marcados como seguros].<li>- Cierre el explorador e intente nuevamente.</ul>");
+        		}
+        	}
         }
 	});
 	return; //Params.CSensor;
@@ -72,7 +89,6 @@ function GetInfoSensorInterno(){
 	/*if( isIE() == false ) {
 
 		oMsg.innerHTML = "Esta p\u00E1gina s\u00F3lo funciona con Internet Explorer 10 o superior.";
-
 		return;
 
 	}*/
@@ -85,15 +101,14 @@ function GetInfoSensorInterno(){
 	sistema =  document.getElementById('rd_64').value;
 	oSistema = "64 bits";
 	}
+	
 	Graba();
 	
-	//EN DURO GERMAN
-	MSensor = "xxx";
-	MUbic = "1";
-	MIns = "10793";
-	//***************
+	/*
 	
 	CodInterno = MSensor;
+	console.log("CodInterno: " + MSensor);
+	
 	if( CodInterno == "." ){
 		;
 	}else if( CodInterno == "" ){
@@ -109,8 +124,12 @@ function GetInfoSensorInterno(){
 			//alert(err.description + ".<ul><li>- Para obtener informaci\u00F3n adicional verifique que la componente AutenLib09.dll est\u00E9 correctamente registrado.<li>- Verifique en la pesta\u00F1a de Seguridad que este sitio est\u00E9 entre los Sitios de Confianza.<li>- Debe activar la opción [Controles y Complementos ActiveX] / [Inicializar y activar la secuencia de comandos de los controles de ActiveX no marcados como seguros].<li>- Cierre el explorador e intente nuevamente.</ul>");
 		}
 	}
+	
+	*/
 }
+
 function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,paterno,materno,sexo,fecha,estado){
+	onsole.log("IniciarUsuario");
 	var _params = "undefined";
 	var token = estampaTiempo();
 	var salida = ['erc', 'ercDesc', 'NroAudit'];
@@ -194,84 +213,87 @@ function IniciarUsuario(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,
 }
 
 function IniciarUsuarioLogin(idUsuario, idAfiliado, idAgenda, dato, tipoDato, nombre,paterno,materno,sexo,fecha,estado){
+	console.log("IniciarUsuarioLogin");
 	var _params = "undefined";
 	var token = estampaTiempo();
-	var salida = ['erc', 'ercDesc', 'NroAudit'];
+	//var salida = ['erc', 'ercDesc', 'NroAudit'];
+	var salida = ['Erc', 'Cant', 'ErcDesc', 'NroAudit', 'FormaString'];
 	var Params   = new TParams;
 	Params.Dato  			= dato;
 	Params.TipoDato			= tipoDato; 
 	Params.Empresa	= "PFA120717716";
 	
-	Params.Erc				= 0;
+	//Params.Erc				= 0;
 	Params.NroAudit			= "";
 	Params.ErcDesc			= "";
 	Params.FormaString		= "";
 	Params.Cant				= 0;		
 	erc						= 0;
-	erc = Autentia.IniciarSesion("611330-2",21);
+	//erc = Autentia.IniciarSesion("611330-2",21);
 	erc = Autentia.Transaccion2 (autentiaPathTrx+"verifica",Params, salida, true, token, function (response) {
         if (!exitoAutentia(response)) {
             $('#modal').modal('hide');
             show_error('Error', '<strong>' + glosaAutentia(response) + '</strong>');
+        }else{
+        	
+        	erc = response.ParamsGet.Erc;
+        	
+        	$.getJSON("http://seb:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
+        		
+        	});
+        	
+        	if(document.getElementById('codigoAutentia') != undefined){
+        		document.getElementById('codigoAutentia').value = Params.ErcDesc;
+        	}
+        	
+        	if(document.getElementById('mensajeAutentia') != undefined){
+        		document.getElementById('mensajeAutentia').value = Params.Erc;
+        	}
+        	
+        	debugger;
+        	if(erc == 0){
+        		if(erc == 201){
+        				//alert("Usuario cancelo operacion");
+        			return false;
+        		}else if(erc == 2){
+        			//alert("La verificacion fue rechazada");
+                    return false;
+        		}else if(erc == 0){
+        			if(typeof(_params)!="undefined" && Params.hasOwnProperty("NroAudit")) 
+        				_params.NroAudit = Params.NroAudit;
+        			else if(typeof(_params)!="undefined") 
+        				_params.NroAudit = "";
+        			else{
+        				_params = new Object();
+        				_params.NroAudit = (Params.hasOwnProperty("NroAudit"))?Params.NroAudit:"";
+        			}
+        			
+        			if(document.getElementById('respuestaAutentia') != undefined){
+        				document.getElementById('respuestaAutentia').value = Params.NroAudit; //Fnc.strRc();
+        			}
+        			
+                    return true;
+        		}else if(erc == 1){
+        			//alert("No se puede generar el patron de huella");
+                    return false;
+        		}
+        	}else if(erc == 2){
+        		//alert("La verificacion fue rechazada.");
+                return false;
+        	 }else if(erc == 5){
+        		alert("No se enrolo correctamente.");
+                return false;
+        	 }else if(erc == 201){
+        		//alert("Usuario cancelo operacion.");
+                return false;
+        	 }else{
+        		alert("La verificacion fue rechazada");
+                return false;
+        	 }
+        	
         }
+        
 	});
-	console.log("idUsuario: " + idUsuario);
-	console.log("idAfiliado: " + idAfiliado);
-	console.log("idAgenda: " + idAgenda);
-	console.log("dato: " + dato);
-	console.log("tipoDato: " + tipoDato);
-	console.log("nombre: " + nombre);
-	
-	$.getJSON("http://seb:8080/SAB/auditoria/agregarAuditoria", {idUsuario:idUsuario, idAfiliado:idAfiliado, idAgenda:idAgenda, tipoDato:Params.TipoDato, dato:Params.Dato, tipoAudit:"0", nroAudit:Params.NroAudit, ercDesc:Params.ErcDesc, erc:Params.Erc} ,function(response){
-		
-	});
-	
-	if(document.getElementById('codigoAutentia') != undefined){
-		document.getElementById('codigoAutentia').value = Params.ErcDesc;
-	}
-	
-	if(document.getElementById('mensajeAutentia') != undefined){
-		document.getElementById('mensajeAutentia').value = Params.Erc;
-	}
-	
-	if(erc == 0){
-		if(Params.Erc == 201){
-				//alert("Usuario cancelo operacion");
-			return false;
-		}else if(Params.Erc == 2){
-			//alert("La verificacion fue rechazada");
-            return false;
-		}else if(Params.Erc == 0){
-			if(typeof(_params)!="undefined" && Params.hasOwnProperty("NroAudit")) _params.NroAudit = Params.NroAudit;
-			else if(typeof(_params)!="undefined") _params.NroAudit = "";
-			else{
-				_params = new Object();
-				_params.NroAudit = (Params.hasOwnProperty("NroAudit"))?Params.NroAudit:"";
-			}
-			
-			if(document.getElementById('respuestaAutentia') != undefined){
-				document.getElementById('respuestaAutentia').value = Params.NroAudit; //Fnc.strRc();
-			}
-			
-            return true;
-		}else if(Params.Erc == 1){
-			//alert("No se puede generar el patron de huella");
-            return false;
-		}
-	}else if(erc == 2){
-		//alert("La verificacion fue rechazada.");
-        return false;
-	 }else if(erc == 5){
-		alert("No se enrolo correctamente.");
-        return false;
-	 }else if(erc == 201){
-		//alert("Usuario cancelo operacion.");
-        return false;
-	 }else{
-		alert("La verificacion fue rechazada");
-        return false;
-	 }
-
 		 
 }
 

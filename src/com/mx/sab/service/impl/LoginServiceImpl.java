@@ -57,8 +57,7 @@ public class LoginServiceImpl implements ILoginService {
 	public LoginForm validaRfc(LoginForm loginForm){
 		//log.info("validaRfc");
 		loginForm.setError("");
-		//Lugaresdeatencion lugaresdeatencion = lugarAtencionDao.getLugarAtencionByClave(loginForm.getTx_Marca());
-		Lugaresdeatencion lugaresdeatencion = lugarAtencionDao.getLugarAtencionByClave("10793");
+		Lugaresdeatencion lugaresdeatencion = lugarAtencionDao.getLugarAtencionByClave(loginForm.getTx_Marca());
 		if (lugaresdeatencion == null) {
 			loginForm.setError("El lugar de atención no está vigente, no se pueden conectar usuarios");
 			loginForm.setBanderaError(true);
@@ -118,8 +117,6 @@ public class LoginServiceImpl implements ILoginService {
 							loginForm.setSexo(usuarios.getCatsexos().getSexoId());
 							loginForm.setFechaNacimiento(FormatUtil.getDate(usuarios.getFechaDeNacimiento()));
 						}else if (vigencia == CatVigenciaEnum.VIGENTE.getId() && usuarios.getCatestatususuario().getId() == CatEstatusUsuarioEnum.AUTORIZADO_CON_CLAVE.getId()) {
-							
-							
 							Permisoespecial permisoEspecial = usuarioDao.getPermisoEspecialByIdUsuario(usuarios.getUsuarioId(), lugaresdeatencion.getLugarDeAtencionId());
 							Date fechaHoy = new Date();
 							SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -129,8 +126,6 @@ public class LoginServiceImpl implements ILoginService {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
-				        	
-				       
 							if(fechaHoy.compareTo(permisoEspecial.getFechaFin())> 0){
 								Usuarios usuario  = usuarioDao.getUsuarioById(usuarios.getUsuarioId());
 								usuario.setCatestatususuario(usuarioDao.getCatEstatusUsuarioById(1));
@@ -194,7 +189,8 @@ public class LoginServiceImpl implements ILoginService {
 				loginForm.setErrorClave("Clave no puede ser igual al RFC");
 			}
 		}else{
-			Usuarios usuarios = usuarioDao.getUsuarioById(loginForm.getIdUsuario());
+			//Usuarios usuarios = usuarioDao.getUsuarioById(loginForm.getIdUsuario());
+			Usuarios usuarios = usuarioDao.getUsuarioById(loginForm.getUsuarios().getUsuarioId());
 			String clave = FormatUtil.getMd5(loginForm.getClave());
 			if (clave.equals(usuarios.getPsswd())) {
 				if (usuarios.getFechaPsswdTemp()!=null) {
